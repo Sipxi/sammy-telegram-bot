@@ -1,0 +1,262 @@
+[
+  {
+    "subject": "BAN4 – Angličtina 4: středně pokročilí 2",
+    "type": "zápočet",
+    "date": "po 5. května 2025 9:00 až 9:45",
+    "result": "započteno",
+    "lecturer": "Sučková Magda, Mgr. Bc., Ph.D.",
+    "room": "T10/N 3.24 (Technická 10, Brno 61600)",
+    "num_of_registered_people": "14/20(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "BAN4 – Angličtina 4: středně pokročilí 2",
+    "type": "závěrečná zkouška",
+    "date": "po 12. května 2025 11:00 až 12:00",
+    "result": "50 b.",
+    "lecturer": "Sučková Magda, Mgr. Bc., Ph.D.",
+    "room": "T10/N 3.23 (Technická 10, Brno 61600)",
+    "num_of_registered_people": "10/12(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IMA1 – Matematická analýza 1",
+    "type": "závěrečná zkouška",
+    "date": "čt 12. června 2025 13:30 až 15:30",
+    "result": "45 b.",
+    "lecturer": "Hliněná Dana, doc. RNDr., Ph.D.",
+    "room": "Aula profesora Braunera (Technická 12, Brno 61600), Aula profesora Kalendovského (Technická 10, Brno 61600), T8/T 0.10 (Technická 2848/8, Brno 61600), T8/T 0.20 (Technická 2848/8, Brno 61600), T8/T 0.30 (Technická 2848/8, Brno 61600)",
+    "num_of_registered_people": "230/600(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "INC – Návrh číslicových systémů",
+    "type": "závěrečná zkouška",
+    "date": "pá 23. května 2025 9:00 až 10:50",
+    "result": "48 b.",
+    "lecturer": "Matoušek Jiří, Ing., Ph.D.",
+    "room": "B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "150/150(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "INC – Návrh číslicových systémů",
+    "type": "zápočet",
+    "date": "út 20. května 2025 12:00 až 13:00",
+    "result": "započteno",
+    "lecturer": "Matoušek Jiří, Ing., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "586/676(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "INC – Návrh číslicových systémů",
+    "type": "půlsemestrální test",
+    "date": "st 9. dubna 2025 10:30 až 11:30",
+    "result": "24.5 b.",
+    "lecturer": "Matoušek Jiří, Ing., Ph.D.",
+    "room": "B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "139/150(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IOS – Operační systémy",
+    "type": "písemná část půlsemestrální zkoušky",
+    "date": "po 31. března 2025 17:00 až 17:40",
+    "result": "4 b.",
+    "lecturer": "Lengál Ondřej, Ing., Ph.D.",
+    "room": "B/D0206 (Božetěchova 1/2, Brno 61200), B/D105 (Božetěchova 1/2, Brno 61200), B/E112 (Božetěchova 1/2, Brno 61200), B/G202 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "677/677(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IOS – Operační systémy",
+    "type": "zápočet",
+    "date": "ne 11. května 2025 23:00 až 23:05",
+    "result": "započteno",
+    "lecturer": "Rogalewicz Adam, doc. Mgr., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "667/753(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IOS – Operační systémy",
+    "type": "závěrečná zkouška",
+    "date": "pá 16. května 2025 9:00 až 10:50",
+    "result": "36.5 b.",
+    "lecturer": "Rogalewicz Adam, doc. Mgr., Ph.D.",
+    "room": "B/D0206 (Božetěchova 1/2, Brno 61200), B/D105 (Božetěchova 1/2, Brno 61200), B/E112 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "261/263(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISU – Programování na strojové úrovni",
+    "type": "zápočet",
+    "date": "pá 9. května 2025 20:00 až 21:00",
+    "result": "započteno",
+    "lecturer": "Orság Filip, Ing., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "622/9999(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISU – Programování na strojové úrovni",
+    "type": "písemná část půlsemestrální zkoušky",
+    "date": "po 24. března 2025 11:00 až 12:30",
+    "result": "15 b.",
+    "lecturer": "Orság Filip, Ing., Ph.D.",
+    "room": "B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "146/150(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISU – Programování na strojové úrovni",
+    "type": "písemná část závěrečné zkoušky",
+    "date": "po 5. května 2025 14:00 až 16:00",
+    "result": "46 b.",
+    "lecturer": "Orság Filip, Ing., Ph.D.",
+    "room": "B/D0206 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "83/90(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISJ – Skriptovací jazyky",
+    "type": "projekty 1/2",
+    "date": "od-do neuvedeno",
+    "result": "34 b.",
+    "lecturer": "Smrž Pavel, doc. RNDr., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "161/161(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISJ – Skriptovací jazyky",
+    "type": "půlsemestrální test",
+    "date": "čt 10. dubna 2025 8:00 až 9:40",
+    "result": "1 b.",
+    "lecturer": "Smrž Pavel, doc. RNDr., Ph.D.",
+    "room": "B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "167/170(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISJ – Skriptovací jazyky",
+    "type": "závěrečná zkouška",
+    "date": "po 12. května 2025 14:00 až 16:50",
+    "result": "19.6 b.",
+    "lecturer": "Smrž Pavel, doc. RNDr., Ph.D.",
+    "room": "B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "160/170(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "ISJ – Skriptovací jazyky",
+    "type": "projekty 2/2",
+    "date": "od-do neuvedeno",
+    "result": "6 b.",
+    "lecturer": "Smrž Pavel, doc. RNDr., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "126/126(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IZLO – Základy logiky pro informatiky",
+    "type": "závěrečná zkouška",
+    "date": "pá 4. dubna 2025 16:00 až 17:50",
+    "result": "63.5 b.",
+    "lecturer": "Kocourek Tomáš, Ing.",
+    "room": "B/A112 (Božetěchova 1/2, Brno 61200), B/A113 (Božetěchova 1/2, Brno 61200), B/D0206 (Božetěchova 1/2, Brno 61200), B/D0207 (Božetěchova 1/2, Brno 61200), B/D105 (Božetěchova 1/2, Brno 61200), B/E104 (Božetěchova 1/2, Brno 61200), B/E105 (Božetěchova 1/2, Brno 61200), B/E112 (Božetěchova 1/2, Brno 61200), B/G202 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "397/655(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IZG – Základy počítačové grafiky",
+    "type": "půlsemestrální test",
+    "date": "út 18. března 2025 15:00 až 16:00",
+    "result": "8 b.",
+    "lecturer": "Španěl Michal, doc. Ing., Ph.D.",
+    "room": "B/E104 (Božetěchova 1/2, Brno 61200), B/E105 (Božetěchova 1/2, Brno 61200), B/E112 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "143/296(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IZG – Základy počítačové grafiky",
+    "type": "závěrečná zkouška",
+    "date": "st 21. května 2025 9:00 až 10:50",
+    "result": "31 b.",
+    "lecturer": "Španěl Michal, doc. Ing., Ph.D.",
+    "room": "B/D0206 (Božetěchova 1/2, Brno 61200), B/D105 (Božetěchova 1/2, Brno 61200)",
+    "num_of_registered_people": "337/419(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  },
+  {
+    "subject": "IZG – Základy počítačové grafiky",
+    "type": "zápočet",
+    "date": "po 19. května 2025 10:00 až 11:00",
+    "result": "započteno",
+    "lecturer": "Španěl Michal, doc. Ing., Ph.D.",
+    "room": null,
+    "num_of_registered_people": "408/540(min. 0)",
+    "is_registered": {
+      "status": false,
+      "raw_data": null
+    }
+  }
+]

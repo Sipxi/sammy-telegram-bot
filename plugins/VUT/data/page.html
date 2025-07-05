@@ -1,0 +1,804 @@
+<!DOCTYPE html><html lang="cs"><head>
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-VNSSBL8Y5R&amp;cx=c&amp;gtm=45He56b1v72750341za200&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104617979~104617981~104661466~104661468~104718208~104736445~104736447"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WCCFFS"></script><script>
+    window.VutAppConfig = {
+        debug: false,
+        langCode: 'cs',
+        baseUrlWww: 'https://www.vut.cz/studis/www_base',
+        urlWww: 'https://www.vut.cz/',
+        perId: 253038,
+        realPerId: 253038    };
+    Object.freeze(window.VutAppConfig);
+
+    Object.defineProperty(window, 'gl_lang_code', {writable:false, value:'cs'});
+    Object.defineProperty(window, 'gl_lang', {writable:false, value:'0'});
+    Object.defineProperty(window, 'gl_debug', {writable:false, value:false});
+    Object.defineProperty(window, 'gl_url_www', {writable:false, value:'https://www.vut.cz/'});
+    Object.defineProperty(window, 'gl_cookie_help_status', {writable:false, value:'t2_help_status'});
+    Object.defineProperty(window, 'gl_perid', {writable:false, value:253038});
+    Object.defineProperty(window, 'gl_upduid', {writable:false, value:253038});
+    Object.defineProperty(window, 'jstr', {
+        writable: false,
+        value: function (cs, en) {
+            cs = (typeof cs == 'string' ? cs : (cs && cs.toString ? cs.toString() : '')).trim().replace(/\s+/, ' ');
+            return cs;
+        }
+    });
+</script>
+    <link media="screen" rel="stylesheet" type="text/css" href="/i/studis/css/loader.css">
+
+<script>try{eval('{let y=async (x=0)=>x**x; y.a??=(null??null)?.[null]??class{#x=1_0n};[0].toReversed().toSorted().with(0,1).toSpliced(0,0).findLast(()=>1);document.querySelector(":has(:is(*))");}')}catch(e){document.write('<div class="alert alert-warning"><div class="alert-icon"><span class="icon-notification2" aria-hidden="true"></span></div><div class="alert-text"><div>Používáte starou verzi internetového prohlížeče.<br>Některé funkce nemusí být podporovány.<br><br>Aktualizujte, prosím, svůj prohlížeč, nebo si nainstalujte některý z moderních prohlížečů  <a href="http://www.mozilla.org/firefox/new/" target="_blank">Firefox</a>,  <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>  nebo  <a href="https://www.opera.com/browsers/opera" target="_blank">Opera</a>.<br>Můžete použít prohlížeč Edge, který je součástí systému Windows.</div></div></div>');};
+    </script>
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCCFFS');</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta name="author" content="CIS VUT v Brně">
+<title>Registrace termínů</title>
+<link rel="shortcut icon" href="/i/www_base/img/favicon_ostra.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/i/images/apple-touch-icon-180x180.png">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!--<link rel="stylesheet" type="text/css" media="all" href="/i/www_base/css/base.css?ver=2015-06-01" />-->
+<link media="all" rel="stylesheet" type="text/css" href="/i/www_base/css/bootstrap3.4.1.min.css?v=1">
+  <!--<link media="all" rel="stylesheet" type="text/css" href="/i/studis/css/bootstrap_clean_studis.css?ver=2" />-->
+      <script type="text/javascript" src="/i/www_base/lib_www/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/i/www_base/lib_www/jquery/ui/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <script type="text/javascript" src="/i/www_base/lib_www/jquery/external/jquery.mb.browser.min.js?v={$version}"></script>
+    <script type="text/javascript" src="/i/www_base/lib_www/ed/ed.js?version=7"></script>
+
+    <script type="text/javascript" src="/i/www_base/js/bootstrap3.4.1.min.js"></script>
+
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/studis/css/terminy_zk.css">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/www_base/css/html.css">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/www_base/css/bootstrap_vut/bootstrap_vut.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/studis/css/bootstrap_local.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/www_base/css/icomoon/style.css?ver=10&amp;version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,greek,greek-ext,cyrillic-ext,latin-ext">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/assets/base/vutajax/vutajax.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/assets/base/vutbox/vutbox.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/assets/base/combobox/combobox.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <link rel="stylesheet" title="Default Skin" media="all" type="text/css" href="/i/assets/base/contextmenu/contextmenu.css?version=4c4536baa0c39bd4903fbb9bb931544efc25f006">
+  <script src="/i/www_base/js/html.js"></script>
+  <script src="/i/assets/base/vutajax/vutajax.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/combobox/combobox.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/contextmenu/contextmenu.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+
+<style>input.autoSubmitBtn,button.autoSubmitBtn{display:none}</style><style>.main.-vut-resize-locked{overflow:hidden !important;}</style><style>.-textarea-maxlength-bar {position:absolute; height:7px; padding:0px; margin-top:-2px; background-color:white; border-top:none !important; position:relative; cursor:help}.-textarea-maxlength-bar>.-textarea-maxlength-indicator {overflow:hidden; width:0px; height:100%; position:relative;}textarea[maxlength]:not(.vut-wysiwyg), textarea[data-maxbytes]:not(.vut-wysiwyg){padding-bottom:12px;}</style></head>
+<body>
+<div id="loader-studis" class="loader-loaded-studis"></div>
+<script>document.getElementById("loader-studis").classList.remove("loader-loaded-studis-no-js");</script>
+<div id="ttip"></div><script language="javascript" type="text/javascript">ttip_obj_init()</script>
+<div class="bg bg-fit"></div>
+<div class="bg bg-css-line bg-css-line-studis"></div>
+<div class="bg bg-css-studis"></div>
+<div id="bg-overlay"></div>
+
+<div class="studis-layout">
+
+<nav class="navbar navbar-inverse">
+    <div class="vut-layout-head-wrap">
+
+            <div class="navbar-header vut-head-sidebar">
+               <a title="Hlavní stránka portálu VUT" class="navbar-brand" href="https://www.vut.cz/"><img src="/i/www_base/img/loga_svg/VUT_ZKR.svg"></a>
+            </div>
+
+            <div class="head-app-wrap">
+                <div id="navbar" class="navbar-left cvis-app">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://www.vut.cz/intra" title="Informační systém VUT v Brně" class="portal"><span class="icon-compass2" aria-hidden="true"></span><br>Portál</a></li>
+                        <li class="active"><a href="https://www.vut.cz/studis/student.phtml" title="Informační systém pro studenty" class="studis"><span class="icon-book3" aria-hidden="true"></span><br>Studis</a></li>
+                        <li><a href="https://www.vut.cz/teacher/2/" title="Informační systém teacher 2" class="teacher"><span class="icon-briefcase" aria-hidden="true"></span><br>Teacher</a></li>
+                        <li><a href="https://moodle.vut.cz/" title="E-learningový systém Moodle" class="elearning"><span class="icon-graduation" aria-hidden="true"></span><br>eLearning</a></li>
+
+                        <li><a href="https://www.vut.cz/intra/apollo" title="Apollo" class="apollo"><span class="icon-apollo" aria-hidden="true"></span><br>Apollo</a></li>
+                        <!--<li><a href="https://www.vutbr.cz/wiki/" title="Wiki VUT v Brně" class="wiki"><span class="icon-wiki_vut"   aria-hidden="true"></span><br>Wiki</a></li>-->
+                    </ul>
+                </div>
+    <!--            cvis app jako dropdown-->
+                <div class="dropdown cvis-app-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                        <span class="cvis-app-selector bg-studis">Studis&nbsp;<span class="vut-icon-down icon-arrow-down2" aria-hidden="true"></span></span>
+                    </a>
+                    <ul class="dropdown-menu " role="menu" aria-labelledby="dLabel">
+                        <li class="close-cvis-app-dropdown"><a href="#"><span class="icon-cancel-circle2" aria-hidden="true"></span> <span>Zavřít</span></a></li>
+                        <li><a href="https://www.vut.cz/intra" title="Informační systém VUT v Brně" class="portal bg-portal"><span class="icon-compass2" aria-hidden="true"></span> Portál</a></li>
+    <!--                    <li><a href="--><!--" title="Informační systém pro studenty" class="studis bg-studis">--><!-- Studis</a></li>-->
+                        <li><a href="https://www.vut.cz/teacher/2/" title="Informační systém teacher 2" class="teacher bg-teacher"><span class="icon-briefcase" aria-hidden="true"></span> Teacher</a></li>
+                        <li><a href="https://moodle.vut.cz/" title="E-learningový systém Moodle" class="elearning bg-elearning"><span class="icon-graduation" aria-hidden="true"></span> eLearning</a></li>
+                        <li><a href="https://www.vut.cz/intra/apollo" title="Apollo" class="apollo bg-apollo"><span class="icon-apollo" aria-hidden="true"></span>Apollo</a></li>
+                        <!--<li><a href="https://www.vutbr.cz/wiki/" title="Wiki VUT v Brně" class="wiki bg-wiki"><span class="icon-wiki_vut"   aria-hidden="true"></span> Wiki</a></li>-->
+                    </ul>
+                </div>
+
+    <!--            cvisbar pro desktopy-->
+                <span class="cvis-bar-desktop-wrap">
+
+
+                    <ul class="nav navbar-nav navbar-right cvis-bar">
+
+                                            <li class="cvis-bar-uzivatel" title="Údaj o přihlášeném studentovi">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdown-user">
+                            <span class="icon-user" aria-hidden="true"></span>                            <span class="uzivatel-text">&nbsp;Serhij Čepil</span>
+                        </a>
+                        <dl class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-user">
+                            <dt>Jméno</dt> <dd>Serhij Čepil</dd><dt>Login</dt> <dd>253038</dd><dt>Os. číslo</dt> <dd>253038</dd><dt>Číslo zvoleného studia</dt> <dd>321606</dd>                        </dl>
+                    </li>
+                    <li class="cvis-bar-nastroje"><a href="#" id="dropdown-tools" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="icon-cog" aria-hidden="true"></span><span class="nastroje-text">&nbsp; Nástroje</span></a>
+
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-tools">
+            <!--                        <li class=""><a href="#" id="menuKompakt" class="btn-navbar-border" data-toggle="modal" data-target="#nastaveniKompaktModal" data-redirect="/test/teacher2/cs/test/tabulka/showCompact/1">--><!--<span class="text">--><!--</span></a></li>-->
+                            <li><a href="#" id="napovedaOdkaz" class="btn-navbar-border" data-toggle="modal" data-target="#nastaveniNapovedaModal"><span class="icon-question5" aria-hidden="true"></span><span class="text">Zakázat nápovědu</span></a></li>
+                                        </ul>
+                    </li>
+
+                                        <li class="cvis-bar-jazyk"><a href="?lang=1&amp;sn=terminy_zk" title="Switch to English"><span class="icon-lang-en" aria-hidden="true"></span><span class="jazyk-text">&nbsp; English</span></a></li>
+
+
+                    <li class="cvis-bar-odhlasit"><a href="https://www.vut.cz/studis/logout.php"><span class="icon-switch" aria-hidden="true"></span><span class="logout-text">&nbsp; Odhlásit</span></a></li>
+                </ul>
+                    </span>
+              </div>
+    </div>
+</nav>
+
+    <!-- Modal -->
+    <div class="modal fade" data-backdrop="static" data-keyboard="false" id="modalLogoutWarn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2 id="modalLogoutLabel"><span style="color: #e4002b;"><span class="icon-notification2" aria-hidden="true"></span></span> Upozornění</h2>
+                </div>
+                <div class="modal-body" id="modalLogoutBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="refreshLogin" class="btn btn-primary refresh-login" data-url="studis/login.php?closeafter=1">Obnovit přihlášení</button>
+                    <button type="button" class="btn btn-primary refresh-logout">Prodloužit</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- konec  Modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="nastaveniNapovedaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">×</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Nápověda</h3>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="helpButton">Povolit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vut-layout-wrap vut-layout-wrap-main">
+
+
+
+<!--<div class="navigation-left">-->
+
+<div class="vut-sidebar-wrap">
+    <div class="sidebar vut-sidebar">
+<!--    kopie z headeru pro mobilni placaky-->
+    <span class="mobile-faculty-bar-part  pull-right">
+            <span class="cvis-bar-mobile-wrap">
+                <ul class="nav navbar-nav navbar-right cvis-bar">
+                    <!-- kopie cvis bar -->
+                    
+
+                    <li class="cvis-bar-uzivatel">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="dropdown-user">
+                            <span class="icon-user" aria-hidden="true"></span>                            <span class="uzivatel-text">&nbsp;Serhij Čepil</span>
+                        </a>
+                        <dl class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-user">
+                            <dt>Jméno</dt> <dd>Serhij Čepil</dd><dt>Login</dt> <dd>253038</dd><dt>Os. číslo</dt> <dd>253038</dd><dt>Číslo zvoleného studia</dt> <dd>321606</dd>                        </dl>
+                    </li>
+
+                    <li class="cvis-bar-nastroje"><a href="#" id="dropdown-tools" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><span class="icon-cog" aria-hidden="true"></span><span class="nastroje-text">&nbsp; Nástroje</span></a>
+
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-tools">
+                                    <!--                        <li class=""><a href="#" id="menuKompakt" class="btn-navbar-border" data-toggle="modal" data-target="#nastaveniKompaktModal" data-redirect="/test/teacher2/cs/test/tabulka/showCompact/1">--><!--<span class="text">--><!--</span></a></li>-->
+                            <li><a href="#" id="napovedaOdkaz" class="btn-navbar-border" data-toggle="modal" data-target="#nastaveniNapovedaModal"><span class="icon-question5" aria-hidden="true"></span><span class="text">Zakázat nápovědu</span></a></li>
+                                                                                </ul>
+                    </li>
+
+                                        <li class="cvis-bar-jazyk"><a href="?lang=1&amp;sn=terminy_zk" title="Switch to English"><span class="icon-lang-en" aria-hidden="true"></span><span class="jazyk-text">&nbsp; English</span></a></li>
+
+
+                        <li class="cvis-bar-casovac"><a href="#"><span class="icon-hour-glass2" aria-hidden="true"></span>&nbsp; <span class="edClock clock-4-4" title="Za přibližně 240 minut dojde k automatickému odhlášení.">240 min</span></a></li>
+                    <li class="cvis-bar-odhlasit"><a href="https://www.vut.cz/studis/logout.php"><span class="icon-switch" aria-hidden="true"></span><span class="logout-text">&nbsp; Odhlásit</span></a></li>
+                        </ul>
+                </span>
+
+    </span>
+
+
+
+
+
+    <ul class="nav faculty-selector-ul"><li class="dropdown faculty-selector"><a class="" title="Vybráno studium FIT" data-toggle="dropdown" aria-expanded="true" style=""><img src="/i/www_base/img/loga_svg/FIT_ZKR.svg" class="logo-fit"><span class="vut-icon-down icon-arrow-down2" aria-hidden="true"></span></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li><a href="?script_name=vyber_studia&amp;studium_id=321606"><img src="/i/www_base/img/loga_svg/FIT_ZKR.svg">BIT BITP  – 2024 &nbsp;<small class="grey"><span class="icon-checkmark-circle" aria-hidden="true"></span></small></a></li><li><a href="?script_name=vyber_studia&amp;studium_id=299360"><img src="/i/www_base/img/loga_svg/FEKT_ZKR.svg">BPC-TLI ---  – 2022 &nbsp;<small class="grey"><span class="icon-blocked" aria-hidden="true"></span></small></a></li></ul></li></ul>
+
+        <div class="search-menu-mobile-wrap">
+            <ul class="nav nav-sidebar menu-search-ul">
+                <li>
+                    <div class="menu-search focus">
+                        <form>
+                            <span class="icon-search3 vut-search-icon"></span>
+                            <span class="text"><input type="search" placeholder="Hledat v menu…" class="" tabindex="1" autocomplete="off" id="menu-hledani"></span>
+                            <button class="icon-cross3 hidden search-reset" type="reset"></button>
+                        </form>
+                    </div>
+                    <div id="menu-search-help" class="hidden animheight">
+                        <div id="resizable-content"></div>
+                    <div id="resizable-content"></div></div>
+                </li>
+            </ul>
+
+            <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#vut-menu" aria-expanded="false" aria-controls="navbar">
+                <span class="toggle-text">MENU</span>
+                <span class="icon-menu7"></span>
+            </div>
+        </div>
+
+
+        <nav id="vut-menu" class="navbar-collapse collapse"><ul class="nav nav-sidebar"><li><a href="?sn=uvodni_info" title="Zobrazení úvodních informací pro studenta"><span class="icon-bullhorn"></span><span class="text">Úvodní informace</span></a></li><li><a href="?sn=vyber_studia" title="Zobrazení přehledu změn studia"><span class="icon-books"></span><span class="text">Studium</span></a></li><li><a href="?sn=osobni_info" title="Zobrazení osobních informací o studentovi"><span class="icon-user"></span><span class="text">Osobní informace</span></a></li><li><a href="?sn=student_zadosti" title="Potvrzení o studiu"><span class="icon-stack-text"></span><span class="text">Potvrzení o studiu</span></a></li><li><a href="?sn=rizeni_a_zadosti" title="Řízení a žádosti"><span class="icon-stack-text"></span><span class="text">Řízení a žádosti</span></a></li><li><a href="?sn=e_omluvenka" title="Elektronické omlouvání z vyuky"><span class="icon-stack-text"></span><span class="text">Elektronické omluvenky</span></a></li><li><a href="?sn=harmonogram" title="Zobrazení časového harmonogramu fakulty"><span class="icon-calendar"></span><span class="text">Harmonogram</span></a></li></ul><ul class="nav nav-sidebar"><li><a href="?sn=el_index" title="Zobrazení a tisk elektronického indexu"><span class="icon-el-index"></span><span class="text">Elektronický index</span></a></li><li><a href="?sn=osobni_rozvrh" title="Osobní rozvrh zaregistrované výuky"><span class="icon-calendar"></span><span class="text">Individuální rozvrh</span></a></li><li><a href="?sn=aktuality_predmet" title="Přehled aktualit ze zapsaných předmětů"><span class="icon-bullhorn"></span><span class="text">Aktuality z předmětu</span></a></li><li><a href="?sn=stipendia" title="Správa stipendií"><span class="icon-piggy-bank"></span><span class="text">Stipendia</span></a></li><li><a href="?sn=poplatky" title="Správa poplatků"><span class="icon-stack-text"></span><span class="text">Poplatky</span></a></li><li><a href="?sn=rozvrhy" title="Rozvrhy"><span class="icon-calendar"></span><span class="text">Rozvrhy</span></a></li></ul><ul class="nav nav-sidebar"><li><a href="?sn=individualni_plan" title="Úprava individuálního plánu studenta"><span class="icon-individualni"></span><span class="text">Individuální plán</span></a></li><li><a href="?sn=individualni_plan_fit" title="Registrace předmětů"><span class="icon-stack-text"></span><span class="text">Registrace předmětů</span></a></li><li><a href="?sn=registrace_vyucovani" title="Registrace vyučování - volba konkrétní vyučovací hodiny"><span class="icon-stack-text"></span><span class="text">Registrace vyučování</span></a></li><li class="active"><a href="?sn=terminy_zk" title="Registrace termínů zkoušek, zápočtů, ..."><span class="icon-clipboard5"></span><span class="text">Registrace termínů</span></a></li><li><a href="?sn=projekty" title="Registrace zadání"><span class="icon-file-text2"></span><span class="text">Registrace zadání</span></a></li><li><a href="?sn=projektova_praxe" title="Projektová praxe"><span class="icon-spoon-knife"></span><span class="text">Projektová praxe</span></a></li></ul><ul class="nav nav-sidebar"><li><a href="?sn=moje_komise" title="Moje komise"><span class="icon-shield3"></span><span class="text">Moje komise</span></a></li></ul><ul class="nav nav-sidebar"><li><a href="?sn=zav_prace_moje" title="Moje závěrečná práce"><span class="icon-file-text2"></span><span class="text">Moje závěrečná práce</span></a></li><li><a href="?sn=prihlaska_szz" title="Přihláška ke státní závěrečné zkoušce"><span class="icon-file-plus"></span><span class="text">Přihláška k SZZ</span></a></li><li><a href="?sn=prihlaska_k_szz" title="Zobrazení komise pro SZZ a hodnocení"><span class="icon-stack-text"></span><span class="text">SZZ - přihláška, výsledky</span></a></li><li><a href="?sn=promoce_registrace" title="Registrace k promoci"><span class="icon-stack-text"></span><span class="text">Promoce</span></a></li></ul><ul class="nav nav-sidebar"><li><a href="?sn=hodnoceni_pr" title="Hodnocení předmětů s podporou mezifakultních předmětů"><span class="icon-question2"></span><span class="text">Hodnocení předmětů</span></a></li><li><a href="?sn=anketa_obecna" title="Ankety"><span class="icon-bubble-notification"></span><span class="text">Ankety</span></a></li><li><a href="?sn=anketa_statistiky" title="Výsledky hodnocení předmětů"><span class="icon-bubble-notification"></span><span class="text">Výsledky hodnocení předmětů</span></a></li><li><a href="?sn=sport" title="Sport"><span class="icon-soccer"></span><span class="text">Sport</span></a></li><li><a href="?sn=poradenstvi" title="Profesní a psychologické poradenství, rozvojové kurzy"><span class="icon-compass2"></span><span class="text">Poradenství a kurzy</span></a></li><li><a href="?sn=zahranicni_pobyty" title="Informace Odboru zahraničních vztahů"><span class="icon-airplane2"></span><span class="text">Zahraniční pobyty</span></a></li></ul></nav></div>
+</div>
+
+<div class="main" style=""><div class="main-content"><h1 class="page-title">Registrace termínů</h1>
+<form action="student.phtml?sn=terminy_zk" method="get" name="chma_terminy_zk"><input type="hidden" name="sn" value="terminy_zk"><div class="form-filter-box"><div class="row"><div class="col-sm-6">
+        <div class="form-group"><label for="chmat[semestr]" class="control-label ">Semestr:</label>
+            <select name="chmat[semestr]" id="chmat[semestr]" class="inpText autoSubmit form-control" onchange="
+            document.forms['chma_terminy_zk']['chmat_js'].value=1;
+            document.forms['chma_terminy_zk'].submit();
+            ">
+        <option value="z" label="zimní">zimní</option><option value="l" selected="" label="letní">letní</option><option value="zil" label="zimní&nbsp;i&nbsp;letní">zimní&nbsp;i&nbsp;letní</option>            </select>
+        </div>
+        </div><div class="col-sm-6">
+        <div class="form-group"><label for="chmat[razeni]" class="control-label ">Seřadit podle:</label>
+            <select name="chmat[razeni]" id="chmat[razeni]" class="inpText autoSubmit form-control" onchange="
+            document.forms['chma_terminy_zk']['chmat_js'].value=1;
+            document.forms['chma_terminy_zk'].submit();
+            ">
+        <option value="pc" label="času">času</option><option value="ppzc" selected="" label="předmětu,&nbsp;pořadí&nbsp;zkoušky&nbsp;a&nbsp;času">předmětu,&nbsp;pořadí&nbsp;zkoušky&nbsp;a&nbsp;času</option><option value="ppc" label="předmětu&nbsp;a&nbsp;času">předmětu&nbsp;a&nbsp;času</option>            </select>
+        </div>
+        </div></div><input type="hidden" name="chmat_js" value="0">
+<input type="submit" class="btn btn-default" name="chmat_offjs" value="nastavit ručně (nemáte zapnutý javascript)" style="display: none;">
+<script type="text/javascript">document.forms['chma_terminy_zk']['chmat_offjs'].style.display='none';</script><div class="row"><div class="col-sm-12"><div class="form-group"><label class="control-label">Zobrazovat termíny:</label><div class="row"><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_potvr_reg_probeh" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí hodnocené termíny a potvrzené zaregistrované termíny, které již proběhly. Pokud není zaškrtnuto " předchozí="" zaregistrované",="" tak="" zobrazuje="" pouze="" poslední="" termín="" u="" daného="" typu="" zkoušky."="">potvrzené&nbsp;proběhlé</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_potvr_reg_aktual" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí zaregistrované termíny, které ještě neproběhly a u kterých již není možné zrušit registraci.">potvrzené&nbsp;zaregistrované</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_nepotvr_reg" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí termíny, u kterých je ještě možné zrušit registraci.">nepotvrzené&nbsp;zaregistrované</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_i_nezareg" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí nezaregistrované termíny.">nezaregistrované</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_reg_bude" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí nezaregistrované termíny, na které bude registrace teprve probíhat.">s&nbsp;neotevřenou&nbsp;registrací</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_nereg_plne" value="1" checked="" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí aktuální nezaregistrované, avšak plně obsazené termíny.">plné</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_dalsi_u_reg" value="1" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí další aktuální termíny u zkoušek, na které jste již zaregistrováni, včetně těch, které jste již úspěšně absolvovali.">další&nbsp;u&nbsp;zaregistrovaných</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_dalsi_u_splnen" value="1" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí další aktuální termíny u předmětů, které jste již úspěšně absolvovali.">další&nbsp;u&nbsp;splněných</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_predchozi_reg" value="1" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí u každé zkoušky kromě poslední registrace také všechny předchozí. První filtr " potvrzené="" proběhlé"="" musí="" být="" zapnut."="">předchozí&nbsp;zaregistrované</span>
+            </label>
+
+        </div><div class="col-md-4 col-sm-6">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input" name="chmap_stare_nereg" value="1" onclick="
+                document.forms['chma_terminy_zk']['chmap_js'].value=1;
+                document.forms['chma_terminy_zk'].submit();">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip" title="Zobrazí neregistrovatelné termíny, tj. termíny na které není možné se zaregistrovat.">neregistrovatelné</span>
+            </label>
+
+        </div></div></div><input type="hidden" name="chmap_js" value="0">
+<input type="submit" name="chmap_offjs" value="nastavit ručně (nemáte zapnutý javascript)" style="display: none;">
+<script type="text/javascript">document.forms['chma_terminy_zk']['chmap_offjs'].style.display='none';</script></div>
+</div>
+<div class="row"><div class="col-sm-12"><div class="form-group"><label class="control-label bs_ttip" title="Seznam předmětů pro letní semestr. Předměty vyberte 'zaškrtnutím' a použijte tlačítko 'zobrazit'. Kliknutím na zkratku předmětu vyberete tento jeden předmět. Absolvované předměty jsou napsány šedou barvou.">Předměty:</label><div class="row"><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281036]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Angličtina 4: středně pokročilí 2">BAN4</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[289359]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip " title="Kondiční posilování">TV-KP</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281065]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Matematická analýza 1">IMA1</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281145]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Návrh číslicových systémů">INC</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[280995]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Operační systémy">IOS</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[280999]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Programování na strojové úrovni">ISU</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281092]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Skriptovací jazyky">ISJ</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281004]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Základy logiky pro informatiky">IZLO</span>
+            </label>
+
+        </div><div class="col-sm-3 col-md-2">
+
+            <label class="custom-control custom-checkbox ">
+              <input type="checkbox" class="custom-control-input js-termin-zk-predmet" name="apidsf[281099]" value="1" checked="">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description bs_ttip  grey" title="Základy počítačové grafiky">IZG</span>
+            </label>
+
+        </div></div></div><div class="row"><div class="col-sm-4"><label class="custom-control custom-checkbox ">
+      <input type="checkbox" class="custom-control-input js-termin-zk-predmet-vse" name="vybrat-vse" value="1" checked="checked">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description grey">Nastavit/zrušit výběr všech předmětů</span>
+        </label></div><div class="col-sm-8 form-filter-btn-panel"><div class="form-group"><input type="submit" name="apids_filter" value="Filtrovat" class="btn btn-primary" title="označte předměty a klikněte na toto tlačítko">
+<input type="submit" name="apids_filter_all" value="Zobrazit vše" class="btn btn-default" title="kliknutím vyberete všechny předměty">
+</div></div></div></div></div>
+    <script type="text/javascript">
+        $('.js-termin-zk-predmet-vse').bind('change', function(e){
+            if($(this).is(':checked')){
+                 $('.js-termin-zk-predmet').prop('checked', true);
+            }else{
+                 $('.js-termin-zk-predmet').prop('checked', false);
+            }
+        });
+        $('.js-termin-zk-predmet').bind('change', function(){
+            var elems = $('.js-termin-zk-predmet');
+            var elemsChecked = $('.js-termin-zk-predmet:checked');
+
+            if(elems.length >0 && elems.length != elemsChecked.length){
+                // nejaky nechecknuty
+                $('.js-termin-zk-predmet-vse').prop('checked', false);
+            }else{
+                $('.js-termin-zk-predmet-vse').prop('checked', true);
+            }
+        });
+    </script>
+
+
+    </div><p></p></form><b><a href="?script_name=terminy_zk&amp;ot=ics" class="bs_ttip btn btn-default" target="_blank" title="Export registrovaných termínů dle zadaného filtru do iCalendar"><span class="icon-share2" aria-hidden="true"></span>Export do iCal</a></b><br><br><div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">BAN4 – Angličtina 4: středně pokročilí 2</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné získat min. 24 bodů ze 40 bodů')" onmouseout="hideddrivetip()" class="noahref">zápočet<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">po 5. května 2025 9:00 až 9:45</span> - Zápočet - Sučková - PO 9.00</div>
+    <div class="m_tinfo">hodnocení termínu: <b>započteno</b> <small>(po 5. května 2025, <a href="/lide/suckova-magda-233652" target="_blank">Sučková Magda, Mgr. Bc., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/suckova-magda-233652" target="_blank">Sučková Magda, Mgr. Bc., Ph.D.</a>, místnost: <span class="bs_ttip" title="T10/N 3.24 (Technická 10, Brno 61600)">T10/N 3.24</span>, přihlášení: 14/20 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">BAN4 – Angličtina 4: středně pokročilí 2</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné získat min. 30 bodů z 60 bodů')" onmouseout="hideddrivetip()" class="noahref">závěrečná zkouška<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">po 12. května 2025 11:00 až 12:00</span> - zkouška - Sučková</div>
+    <div class="m_tinfo">hodnocení termínu: <b>50 b.</b> <small>(po 12. května 2025, <a href="/lide/suckova-magda-233652" target="_blank">Sučková Magda, Mgr. Bc., Ph.D.</a>)</small> – splněno<br>
+zkoušející: <a href="/lide/suckova-magda-233652" target="_blank">Sučková Magda, Mgr. Bc., Ph.D.</a>, místnost: <span class="bs_ttip" title="T10/N 3.23 (Technická 10, Brno 61600)">T10/N 3.23</span>, přihlášení: 10/12 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IMA1 – Matematická analýza 1</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné zůčastnit se')" onmouseout="hideddrivetip()" class="noahref">závěrečná zkouška<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">čt 12. června 2025 13:30 až 15:30</span> - 3. termín</div>
+    <div class="m_tinfo">hodnocení termínu: <b>45 b.</b> <small>(čt 12. června 2025, <a href="/lide/hlinena-dana-58610" target="_blank">Hliněná Dana, doc. RNDr., Ph.D.</a>)</small> – splněno<br>
+zkoušející: <a href="/lide/hlinena-dana-58610" target="_blank">Hliněná Dana, doc. RNDr., Ph.D.</a>, místnost: <span class="bs_ttip" title="Aula profesora Braunera (Technická 12, Brno 61600)">Aula profesora Braunera</span>, <span class="bs_ttip" title="Aula profesora Kalendovského (Technická 10, Brno 61600)">Aula profesora Kalendovského</span>, <span class="bs_ttip" title="T8/T 0.10 (Technická 2848/8, Brno 61600)">T8/T 0.10</span>, <span class="bs_ttip" title="T8/T 0.20 (Technická 2848/8, Brno 61600)">T8/T 0.20</span>, <span class="bs_ttip" title="T8/T 0.30 (Technická 2848/8, Brno 61600)">T8/T 0.30</span>, přihlášení: 230/600 <small>(min. 0)</small> <br>
+body k připuštění: požadováno 8, máte 56
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">INC – Návrh číslicových systémů</span> (závěrečná zkouška)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">pá 23. května 2025 9:00 až 10:50</span> - 1. termín - D105</div>
+    <div class="m_tinfo">hodnocení termínu: <b>48 b.</b> <small>(pá 23. května 2025, <a href="/lide/matousek-jiri-72391" target="_blank">Matoušek Jiří, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/fucik-otto-2081" target="_blank">Fučík Otto, doc. Dr. Ing.</a>, místnost: <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 150/150 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">INC – Návrh číslicových systémů</span> (zápočet)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">út 20. května 2025 12:00 až 13:00</span> - automatický zápočet</div>
+    <div class="m_tinfo">hodnocení termínu: <b>započteno</b> <small>(po 19. května 2025, <a href="/lide/matousek-jiri-72391" target="_blank">Matoušek Jiří, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/matousek-jiri-72391" target="_blank">Matoušek Jiří, Ing., Ph.D.</a>, místnost: virtuální místnost, přihlášení: 586/676 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">INC – Návrh číslicových systémů</span> (půlsemestrální test)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">st 9. dubna 2025 10:30 až 11:30</span> - Půlsemestrální test (D105: 10:30 - 11:30)</div>
+    <div class="m_tinfo">hodnocení termínu: <b>24.5 b.</b> <small>(st 9. dubna 2025, <a href="/lide/matousek-jiri-72391" target="_blank">Matoušek Jiří, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/fucik-otto-2081" target="_blank">Fučík Otto, doc. Dr. Ing.</a>, místnost: <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 139/150 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IOS – Operační systémy</span> (písemná část půlsemestrální zkoušky)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">po 31. března 2025 17:00 až 17:40</span> - Půlsemestrální zkouška - první běh - Půlsemestrální test - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>4 b.</b> <small>(po 31. března 2025, <a href="/lide/lengal-ondrej-78581" target="_blank">Lengál Ondřej, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/rogalewicz-adam-52800" target="_blank">Rogalewicz Adam, doc. Mgr., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D0206 (Božetěchova 1/2, Brno 61200)">B/D0206</span>, <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, <span class="bs_ttip" title="B/E112 (Božetěchova 1/2, Brno 61200)">B/E112</span>, <span class="bs_ttip" title="B/G202 (Božetěchova 1/2, Brno 61200)">B/G202</span>, přihlášení: 677/677 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IOS – Operační systémy</span> (zápočet)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">ne 11. května 2025 23:00 až 23:05</span> - Automatické udělení zápočtu</div>
+    <div class="m_tinfo">hodnocení termínu: <b>započteno</b> <small>(út 6. května 2025, <a href="/lide/rogalewicz-adam-52800" target="_blank">Rogalewicz Adam, doc. Mgr., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/rogalewicz-adam-52800" target="_blank">Rogalewicz Adam, doc. Mgr., Ph.D.</a>, místnost: Není, přihlášení: 667/753 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IOS – Operační systémy</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné získat min. 27 bodů z 60 bodů')" onmouseout="hideddrivetip()" class="noahref">závěrečná zkouška<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">pá 16. května 2025 9:00 až 10:50</span> - 1. termín - Závěrečná zkouška - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>36.5 b.</b> <small>(pá 16. května 2025, <a href="/lide/rogalewicz-adam-52800" target="_blank">Rogalewicz Adam, doc. Mgr., Ph.D.</a>)</small> – splněno<br>
+zkoušející: <a href="/lide/rogalewicz-adam-52800" target="_blank">Rogalewicz Adam, doc. Mgr., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D0206 (Božetěchova 1/2, Brno 61200)">B/D0206</span>, <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, <span class="bs_ttip" title="B/E112 (Božetěchova 1/2, Brno 61200)">B/E112</span>, přihlášení: 261/263 <small>(min. 0)</small> <br>
+<a href="javascript:void(0);" onmouseover="ddrivetip('Na termín se mohou hlásit jen studenti, kteří jdou na 1. termín.')" onmouseout="hideddrivetip()" class="noahref"><span class="m_nespl_pod">pořadí termínu: 1</span><span class="ttiphelp">&nbsp;?</span></a><div class="m_pozn">poznámka k termínu: * Do zveřejnění výsledků termínu, na který jste přihlášeni je zakázáno se přihlašovat na další termín. Studenti, kteří toto nedodrží budou odhlášeni a jimi blokovaná místa budou uvolněna ostatním.
+* Studenti přihlášení na 1. termín nemohou navštívit 2. termín jako další pokus.
+* Studenti přihlášení na 3. termín nemohou navštívit 4. termín jako další pokus.
+* Na 5. termínu bude dostatek míst pro všechny studenty, kteří ještě nebudou mít absolvovanou zkoušku.</div>
+
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISU – Programování na strojové úrovni</span> (zápočet)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">pá 9. května 2025 20:00 až 21:00</span> - Zápočet - Zápočet - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>započteno</b> <small>(so 10. května 2025, <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>, místnost: N/A, přihlášení: 622/9999 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISU – Programování na strojové úrovni</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<b>poznámka:<\/b> exams')" onmouseout="hideddrivetip()" class="noahref">písemná část půlsemestrální zkoušky<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">po 24. března 2025 11:00 až 12:30</span> - Půlsemestrální zkouška D105-11:00 - Půlsemestrální zkouška - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>15 b.</b> <small>(čt 27. března 2025, <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 146/150 <small>(min. 0)</small> <div class="m_pozn">poznámka k termínu: examM</div>
+
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISU – Programování na strojové úrovni</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<b>poznámka:<\/b> exams<br \/>\n' +
+'<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné získat min. 25 bodů z 60 bodů')" onmouseout="hideddrivetip()" class="noahref">písemná část závěrečné zkoušky<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">po 5. května 2025 14:00 až 16:00</span> - Předtermín 1</div>
+    <div class="m_tinfo">hodnocení termínu: <b>46 b.</b> <small>(so 10. května 2025, <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>)</small> – splněno<br>
+zkoušející: <a href="/lide/orsag-filip-15510" target="_blank">Orság Filip, Ing., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D0206 (Božetěchova 1/2, Brno 61200)">B/D0206</span>, přihlášení: 83/90 <small>(min. 0)</small> <div class="m_pozn">poznámka k termínu: exam0</div>
+
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISJ – Skriptovací jazyky</span> (projekty 1/2)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">od-do neuvedeno</span> - Automatický termín  1 - Projekty - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>34 b.</b> <small>(ne 11. května 2025, <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>, přihlášení: 161/161 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISJ – Skriptovací jazyky</span> (půlsemestrální test)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">čt 10. dubna 2025 8:00 až 9:40</span> - Půlsemestrální test - Půlsemestrální test - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>1 b.</b> <small>(čt 10. dubna 2025, <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 167/170 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISJ – Skriptovací jazyky</span> (závěrečná zkouška)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">po 12. května 2025 14:00 až 16:50</span> - 1. termín - Závěrečná zkouška - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>19.6 b.</b> <small>(po 12. května 2025, <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 160/170 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">ISJ – Skriptovací jazyky</span> (projekty 2/2)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">od-do neuvedeno</span> - Automatický termín  1 - Miniúkoly z přednášek - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>6 b.</b> <small>(ne 11. května 2025, <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/smrz-pavel-57785" target="_blank">Smrž Pavel, doc. RNDr., Ph.D.</a>, přihlášení: 126/126 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IZLO – Základy logiky pro informatiky</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<b>informace:<\/b> <p>Naučte se, prosím; je potřeba získat min. 40 bodů ze zkoušky (a 50 z celého semestru).<\/p><br \/>\n' +
+'<span class=&quot;m_vyrazne&quot;><b>povinnost:<\/b> <\/span>pro úspěšné absolvování předmětu je nutné získat min. 40 bodů z 82 bodů')" onmouseout="hideddrivetip()" class="noahref">závěrečná zkouška<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">pá 4. dubna 2025 16:00 až 17:50</span> - předtermín - Zkouška - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>63.5 b.</b> <small>(pá 4. dubna 2025, <a href="/lide/kocourek-tomas-213471" target="_blank">Kocourek Tomáš, Ing.</a>)</small> – splněno<br>
+zkoušející: <a href="/lide/holik-lukas-103996" target="_blank">Holík Lukáš, doc. Mgr., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/A112 (Božetěchova 1/2, Brno 61200)">B/A112</span>, <span class="bs_ttip" title="B/A113 (Božetěchova 1/2, Brno 61200)">B/A113</span>, <span class="bs_ttip" title="B/D0206 (Božetěchova 1/2, Brno 61200)">B/D0206</span>, <span class="bs_ttip" title="B/D0207 (Božetěchova 1/2, Brno 61200)">B/D0207</span>, <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, <span class="bs_ttip" title="B/E104 (Božetěchova 1/2, Brno 61200)">B/E104</span>, <span class="bs_ttip" title="B/E105 (Božetěchova 1/2, Brno 61200)">B/E105</span>, <span class="bs_ttip" title="B/E112 (Božetěchova 1/2, Brno 61200)">B/E112</span>, <span class="bs_ttip" title="B/G202 (Božetěchova 1/2, Brno 61200)">B/G202</span>, přihlášení: 397/655 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IZG – Základy počítačové grafiky</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<b>informace:<\/b> <p>Informace k půlsemestrální zkoušce budou zveřejněny v Moodle.<\/p>')" onmouseout="hideddrivetip()" class="noahref">půlsemestrální test<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hneud">
+    <div class="m_podnadpis"><span class="hlavni">út 18. března 2025 15:00 až 16:00</span> - Půlsemestrální písemka z IZG (termín v úterý od 15:00) - Půlsemestrální test IZG - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>8 b.</b> <small>(pá 28. března 2025, <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/E104 (Božetěchova 1/2, Brno 61200)">B/E104</span>, <span class="bs_ttip" title="B/E105 (Božetěchova 1/2, Brno 61200)">B/E105</span>, <span class="bs_ttip" title="B/E112 (Božetěchova 1/2, Brno 61200)">B/E112</span>, přihlášení: 143/296 <small>(min. 0)</small> <div class="m_pozn">poznámka k termínu: Půlsemestrálka bude na začátku přednášky od 15:00, bude trvat 30 minut + rezerva. Přednáška poté bude normálně pokračovat od 16:00. Rozmístění studentů do místností bude zveřejněno den před půlsemestrálkou. Studenti se specifickými potřebami budou mít k dispozici čas navíc. Po odevzdání zkouškového listu prosím opusťte přednáškovou místnost, pak se do ní vraťte při začátku přednášky.</div>
+
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IZG – Základy počítačové grafiky</span> (<a href="javascript:void(0);" onmouseover="ddrivetip('<b>informace:<\/b> <p>Informace k semestrální zkoušce budou zveřejněny v Moodle.<\/p>')" onmouseout="hideddrivetip()" class="noahref">závěrečná zkouška<span class="ttiphelp">?</span></a>)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">st 21. května 2025 9:00 až 10:50</span> - 1. termín - Semestrální zkouška IZG - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>31 b.</b> <small>(st 21. května 2025, <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>, místnost: <span class="bs_ttip" title="B/D0206 (Božetěchova 1/2, Brno 61200)">B/D0206</span>, <span class="bs_ttip" title="B/D105 (Božetěchova 1/2, Brno 61200)">B/D105</span>, přihlášení: 337/419 <small>(min. 0)</small> 
+    </div>
+  </div>
+</div>
+<div class="m_ppzc">
+  <div class="m_nadpis"><span class="hlavni">IZG – Základy počítačové grafiky</span> (zápočet)</div>
+  <div class="m_termin m_tsreg_hud">
+    <div class="m_podnadpis"><span class="hlavni">po 19. května 2025 10:00 až 11:00</span> - Automatický termín pro zápočet za aktivity během semestru - Zápočet za aktivity během semestru - </div>
+    <div class="m_tinfo">hodnocení termínu: <b>započteno</b> <small>(po 9. června 2025, <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>)</small><br>
+zkoušející: <a href="/lide/spanel-michal-17677" target="_blank">Španěl Michal, doc. Ing., Ph.D.</a>, místnost: není, přihlášení: 408/540 <small>(min. 0)</small> <br>
+jen pro studenty zkoušejícího: ano
+    </div>
+  </div>
+</div></div></div>  <script src="/i/www_base/lib_www/jquery/external/jquery.cookie.js"></script>
+  <script src="/i/studis/js/main.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/main/main.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/bs3/bs3.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/vutbox/vutbox.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+  <script src="/i/assets/base/datagrid2/datagrid2.pack.js?version=4c4536baa0c39bd4903fbb9bb931544efc25f006"></script>
+</div> <!--vut-layout-wrap-->
+
+<!--paticka -->
+<div class="vut-layout-wrap">
+    <div class="sidebar vut-sidebar-wrap sidebar-foot">&nbsp;</div> <!-- nutne kvuli odsazeni zleva -->
+    <div class="main main-foot">
+        <div class="foot-left">
+            <img src="/i/www_base/img/loga_svg/CIS_ZKR.svg" class="logo-cvis"><br>
+            © 2004–2025        </div>
+        <div class="foot-right">
+            <p>Pokud máte nějaké dotazy nebo problémy týkající se systému Studis, kontaktujte svého <a target="_blank" href="https://www.vut.cz/cis/integratori">systémového integrátora</a>.</p><p>Pokud máte nějaké dotazy nebo problémy s údaji v systému Studis, kontaktujte své studijní oddělení.</p>        </div>
+        <div class="foot-debug">
+            <span class="-js-server-time">14.06.2025 16:25:09</span><br> php 0.13s, sql 0.00s<br>
+bulldog2, cdbx2        </div>
+    </div>
+</div>
+
+</div><script type="text/javascript" id="" charset="">(function(){try{window._gtm_mh=window._gtm_mh||{};window._gtm_mh.lib=window._gtm_mh.lib||{};window._gtm_mh.gtm=window._gtm_mh.gtm||window.google_tag_manager[google_tag_manager["rm"]["2750341"](62)];window._gtm_mh.trackError=function(a,b){var c="";c="string"===typeof b?c+b:b instanceof Error?c+b.message:c+('Unknown error type "'+typeof b+'" and value '+b);google_tag_manager["rm"]["2750341"](63)&&(console.group("GTM Error Occured: "+a),console.error("Exception",b),console.error("on event gtm.init"),console.error("GTM-WCCFFS of version 134"),
+console.groupEnd());window._gtm_mh.gtm.dataLayer.push({event:"gtm.exception",error:{type:a+" (GTM-WCCFFS of version 134)",message:c+" on event "+google_tag_manager["rm"]["2750341"](64),exception:b}})};window._gtm_mh.trackEvent=google_tag_manager["rm"]["2750341"](65);window._gtm_mh.trackPageview=google_tag_manager["rm"]["2750341"](66);window._gtm_mh.trackSocialAction=google_tag_manager["rm"]["2750341"](67);window._gtm_mh.cookieGet=function(a){a+="\x3d";for(var b=document.cookie.split(";"),c=0;c<b.length;c++){for(var d=b[c];" "==d.charAt(0);)d=
+d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};window._gtm_mh.cookieSet=function(a,b,c,d){var g="";var h="http:"!==document.location.protocol?";secure":"";c&&(g=new Date,g.setTime(g.getTime()+864E5*c),g="; expires\x3d"+g.toUTCString());c=d?d:location.host;c=c.split(":")[0];if(1===c.split(".").length)document.cookie=a+"\x3d"+b+g+h+"; path\x3d/";else if(d=c.split("."),d.shift(),d="."+d.join("."),document.cookie=a+"\x3d"+b+g+h+"; path\x3d/; domain\x3d"+
+d,null==window._gtm_mh.cookieGet(a)||window._gtm_mh.cookieGet(a)!=b)d="."+c,document.cookie=a+"\x3d"+b+g+h+"; path\x3d/; domain\x3d"+d};window._gtm_mh.on=function(a,b,c,d){try{var g=document.querySelector(a);g&&g.addEventListener(b,function(h){for(var l=g.querySelectorAll(c),p=h.target,q=0,k=l.length;q<k;q++)for(var f=p,m=l[q];f&&f!==g;){if(f===m)return d.call(m,h);f=f.parentNode}})}catch(h){window._gtm_mh.trackError("tracking/aac.gtm.initPageData/on",h)}};window._gtm_mh.standardizeDate=function(a){if("string"!==
+typeof a)return null;if(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(a))return a;if(a=a.match(/^([0-9]{1,2})\.\s*([0-9]{1,2})\.\s*([0-9]{4})$/))return a[3]+"-"+("0"+a[2]).slice(-2)+"-"+("0"+a[1]).slice(-2)};window._gtm_mh.dateDiffInDays=function(a,b){try{if("string"!==typeof a)return null;a=new Date(a.substr(0,4),a.substr(5,2)-1,a.substr(8,2));b=b?new Date(b.substr(0,4),b.substr(5,2)-1,b.substr(8,2)):new Date;a=b-a;return Math.round(a/864E5)}catch(c){window._gtm_mh.trackError("tracking/aac.gtm.initPageData/dateDiffInDays",
+c)}};window._gtm_mh.findAncestor=function(a,b){for(a&&b||window._gtm_mh.trackError("tracking/aac.gtm.initPageData/findAncestor","Invalid input data");(a=a.parentElement)&&!(a.matches||a.matchesSelector).call(a,b););return a};window._gtm_mh.findAncestorLink=function(a){for(a||window._gtm_mh.trackError("tracking/aac.gtm.initPageData/findAncestorLink","Invalid input data");(a=a.parentElement)&&"A"!==a.nodeName;);return a};window._gtm_mh.sha256=function(a){try{var b=8,c=0,d=function(k,f){var m=(k&65535)+
+(f&65535);k=(k>>16)+(f>>16)+(m>>16);return k<<16|m&65535},g=function(k,f){return k>>>f|k<<32-f},h=function(k,f){var m=[1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635748,2870763221,3624381080,310598401,607225278,1426881987,1925078388,2162078206,2614888103,3248222580,3835390401,4022224774,264347078,604807628,770255983,1249150122,1555081692,1996064986,2554220882,2821834349,2952996808,3210313671,3336571891,3584528711,113926993,338241895,666307205,773529912,1294757372,1396182291,
+1695183700,1986661051,2177026350,2456956037,2730485921,2820302411,3259730800,3345764771,3516065817,3600352804,4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298],e=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225],z=Array(64),J,r;k[f>>5]|=128<<24-f%32;k[(f+64>>9<<4)+15]=f;for(J=0;J<k.length;J+=16){f=e[0];var E=e[1];var F=
+e[2];var N=e[3];var A=e[4];var K=e[5];var L=e[6];var x=e[7];for(r=0;64>r;r++){if(16>r)z[r]=k[r+J];else{var v=r;var y=z[r-2];y=g(y,17)^g(y,19)^y>>>10;y=d(y,z[r-7]);var G=z[r-15];G=g(G,7)^g(G,18)^G>>>3;z[v]=d(d(y,G),z[r-16])}v=A;v=g(v,6)^g(v,11)^g(v,25);v=d(d(d(d(x,v),A&K^~A&L),m[r]),z[r]);x=f;x=g(x,2)^g(x,13)^g(x,22);y=d(x,f&E^f&F^E&F);x=L;L=K;K=A;A=d(N,v);N=F;F=E;E=f;f=d(v,y)}e[0]=d(f,e[0]);e[1]=d(E,e[1]);e[2]=d(F,e[2]);e[3]=d(N,e[3]);e[4]=d(A,e[4]);e[5]=d(K,e[5]);e[6]=d(L,e[6]);e[7]=d(x,e[7])}return e},
+l=function(k){for(var f=[],m=(1<<b)-1,e=0;e<k.length*b;e+=b)f[e>>5]|=(k.charCodeAt(e/b)&m)<<24-e%32;return f},p=function(k){k=k.replace(/\r\n/g,"\n");for(var f="",m=0;m<k.length;m++){var e=k.charCodeAt(m);128>e?f+=String.fromCharCode(e):(127<e&&2048>e?f+=String.fromCharCode(e>>6|192):(f+=String.fromCharCode(e>>12|224),f+=String.fromCharCode(e>>6&63|128)),f+=String.fromCharCode(e&63|128))}return f},q=function(k){for(var f=c?"0123456789ABCDEF":"0123456789abcdef",m="",e=0;e<4*k.length;e++)m+=f.charAt(k[e>>
+2]>>8*(3-e%4)+4&15)+f.charAt(k[e>>2]>>8*(3-e%4)&15);return m};a=p(a);return q(h(l(a),a.length*b))}catch(k){window._gtm_mh.trackError("tracking/aac.gtm.initPageData/sha256",k)}};window._gtm_mh.getReachAbs=function(a){return window.pageYOffset||(document.documentElement||document.body.parentNode||document.body).scrollTop};window._gtm_mh.getReachPct=function(a){a=window._gtm_mh.getReachAbs();var b=document.body.scrollHeight>document.body.clientHeight?document.body.scrollHeight:document.body.clientHeight;
+return Math.floor(100*a/(b-window.innerHeight))/100};window._gtm_mh.getURLParameter=function(a){return window.decodeURIComponent(((new RegExp("[?|\x26]"+a+"\x3d([^\x26;]+?)(\x26|#|;|$)","i")).exec(window.location.search)||[null,""])[1].replace(/\+/g,"%20"))||null};window._gtm_mh.removeDiacritics=function(a){a=a.toLowerCase();a=a.replace(/[\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5]/g,"a");a=a.replace(/[\u00e7\u010d]/g,"c");a=a.replace(/[\u00e8\u00e9\u00ea\u00eb\u011b]/g,"e");a=a.replace(/[\u00ec\u00ed\u00ee\u00ef]/g,
+"i");a=a.replace(/\u0148/g,"n");a=a.replace(/[\u00f2\u00f3\u00f4\u00f5\u00f6]/g,"o");a=a.replace(/[\u00f9\u00fa\u00fb\u00fc\u016f]/g,"u");a=a.replace(/[\u00fd\u00ff]/g,"y");a=a.replace(/[\u0159]/g,"r");a=a.replace(/[\u010f]/g,"d");a=a.replace(/[\u0165]/g,"t");a=a.replace(/[\u0161]/g,"s");return a=a.replace(/[\u017e]/g,"z")};window._gtm_mh.stringToEventName=function(a){a=window._gtm_mh.removeDiacritics(a||"");return a.replace(/[\s-]+/g,"_").replace(/[^a-z_]/g,"").trim()};window._gtm_mh.visitedPagePercent=
+0;window._gtm_mh.maxScrollReach=0;window._gtm_mh.evaluateScrollReach=function(){var a=document.documentElement,b=a.scrollTop+document.body.scrollTop+a.clientHeight;b=Math.round(100*b/a.scrollHeight);b>window._gtm_mh.visitedPagePercent&&(window._gtm_mh.visitedPagePercent=b);a=(a.scrollTop+document.body.scrollTop)/(a.scrollHeight-a.clientHeight)*100;a>window._gtm_mh.maxScrollReach&&(window._gtm_mh.maxScrollReach=Math.round(a))};window._gtm_mh.evaluateScrollReach();var H=google_tag_manager["rm"]["2750341"](68);window._gtm_mh.lib.getXpath=
+function(a){for(var b=["header-top","header-sections","category-header"],c=[],d=0,g=0,h,l=function(f,m){for(var e=0;e<m.length;e++)if(-1<(" "+f.className+" ").indexOf(" "+m[e]+" "))return m[e];return!1},p=function(f){switch(f){case "DIV":return"d";case "FORM":return"f";case "BODY":return"b";default:return f}};null!=a.parentNode;){g=d=0;h=a.nodeName.toLowerCase();if(a.hasAttribute("id")&&""!=a.id){c.unshift(p(h)+"#"+a.id);break}else if("header"===h||"footer"===h){c.unshift(h.toLowerCase());break}else if(b.length&&
+a.className.length&&l(a,b)){var q=l(a,b);if(q){c.unshift(p(h)+"."+q);break}}for(q=0;q<a.parentNode.childNodes.length;q++){var k=a.parentNode.childNodes[q];k.nodeName==a.nodeName&&(k===a&&(g=d),d++)}1<d?c.unshift(p(h)+":eq("+g+")"):c.unshift(p(h));a=a.parentNode}return c.join("\x3e")};window._gtm_mh.detectNonBounce=function(a,b,c){if(document.hidden)return 0;var d=H?window._gtm_mh.cookieGet("_gtm_mh_isnnbc"):null,g=window._gtm_mh.getReachAbs,h=window._gtm_mh.getReachPct,l=google_tag_manager["rm"]["2750341"](69);if("1"!=
+d){var p=function(q){H&&window._gtm_mh.cookieSet("_gtm_mh_isnnbc","1");window._gtm_mh.gtm.dataLayer.push({event:"status.nonBounce",status:{nonBounce:{reason:q}}});return 1};if("gtm.js"===a||"gtm.dom"===a)l.nonbounceScrollMinTreshold&&l.nonbounceScrollMinTreshold*window.innerHeight<g()+window.innerHeight?window._gtm_mh.nbtScrollDis=1:l.nonbounceScrollPercent&&l.nonbounceScrollPercent<100*h()&&(window._gtm_mh.nbtScrollDis=1);if("0"===d){if(b)return p("Second pageview");if("action."===a.substr(0,7)&&
+c.context&&!c.context.nonInteractive)return p("Interactive hit");if(l.nonbounceTimeOnPage&&(a=window._gtm_mh.gtm.dataLayer.push("gtm.start"),b=(new Date).getTime(),(b-a)/1E3>l.nonbounceTimeOnPage))return p("Time on page "+(b-a)/1E3+" seconds");if(!window._gtm_mh.nbtScrollDis&&(l.nonbounceScrollPercent||l.nonbounceScrollMinTreshold)&&(b=a=!0,c=[],l.nonbounceScrollMinTreshold&&(l.nonbounceScrollMinTreshold*window.innerHeight>g()+window.innerHeight?b=!1:c.push(g()+window.innerHeight+"px")),l.nonbounceScrollPercent&&
+(l.nonbounceScrollPercent>100*h()?a=!1:c.push(100*h()+" % of page")),b&&a))return p("Scroll to "+c.join(" and "))}else b&&H&&window._gtm_mh.cookieSet("_gtm_mh_isnnbc","0");return 0}};window._gtm_mh.gtm.dataLayer.set("page.getURLParameter",window._gtm_mh.getURLParameter);window._gtm_mh.page=window._gtm_mh.page||{};window._gtm_mh.page.getBrowsingData=function(a){var b=window._gtm_mh.gtm.dataLayer.get("browsingBehavior");if(!b)return null;b={tabCount:b.tabCount,redirectCount:b.redirectCount,navigationType:b.navigationType,
+newTab:b.newTab,tabId:b.tabId};return a&&window.JSON?JSON.stringify(b):b};window._gtm_mh.gtm.dataLayer.set("page.getBrowsingData",window._gtm_mh.page.getBrowsingData);var B=google_tag_manager["rm"]["2750341"](70);B&&window._gtm_mh.gtm.dataLayer.set("page.previousPage",B.replace(/(^https?:\/\/|\?.*$)/,""));window._gtm_mh.getBrowsingMarTechDataGA4=function(a){var b=window._gtm_mh.gtm.dataLayer.get("browsingBehavior");if(!b)return null;var c={tc:b.tabCount,rc:b.redirectCount,nT:b.newTab.substring(0,1)};c.nv="NAVIGATE"==
+b.navigationType?1:0;document.visibilityState&&(c.vs=document.visibilityState?1:0);b=null;if(param=window._gtm_mh.getURLParameter("mc_eid"))b="email",c.mcid=param;if(param=window._gtm_mh.getURLParameter("ecmid"))b="email",c.ecmid=param;b&&(c.s=b);return a&&window.JSON?JSON.stringify(c):c};window._gtm_mh.gtm.dataLayer.set("page.getBrowsingMarTechDataGA4",window._gtm_mh.page.getBrowsingMarTechDataGA4);window._gtm_mh.getMarTechData=function(a){var b={t:+new Date,bn:window.Notification&&window.Notification.permission?
+Notification.permission:"not supported"};b.size=!0===document.hidden?50>window.outerHeight?"minimized":"hidden":window.screen.availHeight===window.outerHeight&&window.screen.availWidth===window.outerWidth?"maximized":window.screen.height===window.innerHeight&&window.screen.width===window.innerWidth?"fullscreen":void 0===document.hidden?"not detected":"normal";if(-1<window.location.href.indexOf("translate.goog")||-1<window.location.href.indexOf("translate.googleusercontent.com")){var c=window._gtm_mh.getURLParameter("tl");
+var d="GTW"}else-1<document.documentElement.className.indexOf("translated-")?(c=document.documentElement.lang,d="GTP"):-1<window.location.href.indexOf("translatoruser-int.com")&&(c=window._gtm_mh.getURLParameter("to"),d="BT");b.pl=c||document.documentElement.lang;d&&(b.ts=d);document.visibilityState&&(b.vs=document.visibilityState);c=null;if(d=window._gtm_mh.getURLParameter("gclid"))c="google / cpc",b.gclid=d;if(d=window._gtm_mh.getURLParameter("mc_eid"))c="email",b.mcid=d;if(d=window._gtm_mh.getURLParameter("ecmid"))c=
+"email",b.ecmid=d;(d=window._gtm_mh.cookieGet("_gtm_hjid"))&&(b.hjid=d);-1<document.location.search.indexOf("utm_")&&(c=(window._gtm_mh.getURLParameter("utm_source")||"(not set)")+"/"+(window._gtm_mh.getURLParameter("utm_medium")||"(not set)"));c&&(b.s=c);document.referrer&&document.referrer&&-1===document.referrer.indexOf(document.location.hostname)&&(b.s=document.referrer.split("/")[2]+"/referrer",b.ref=document.referrer.substr(0,140-JSON.stringify(b).length));return a?JSON.stringify(b):b};window._gtm_mh.gtm.dataLayer.set("page.getMarTechData",
+window._gtm_mh.getMarTechData);window._gtm_mh.crypt=function(a,b){var c=function(h){return h.split("").map(function(l){return l.charCodeAt(0)})},d=function(h){return("0"+Number(h).toString(16)).substr(-2)},g=function(h){return c(a).reduce(function(l,p){return l^p},h)};return b.split("").map(c).map(g).map(d).join("")};window._gtm_mh.decrypt=function(a,b){var c=function(g){return g.split("").map(function(h){return h.charCodeAt(0)})},d=function(g){return c(a).reduce(function(h,l){return h^l},g)};return b.match(/.{1,2}/g).map(function(g){return parseInt(g,
+16)}).map(d).map(function(g){return String.fromCharCode(g)}).join("")};window._gtm_mh.gtm.dataLayer.set("order.getRandomId",function(){if(this.randomId)return this.randomId;var a=Math.floor(1E9*Math.random())+1;var b=9,c=void 0;c=c||"0";a+="";a=a.length>=b?a:Array(b-a.length+1).join(c)+a;return this.randomId="R_"+a});window._gtm_mh.gtm.dataLayer.set("user.getId",function(){try{var a=google_tag_manager["rm"]["2750341"](71),b=this.id?this.id.toString():null,c;if(!H)return b;a.cookiesUserIdEnabled&&(c=window._gtm_mh.cookieGet(a.cookiesUserIdName));
+a.cookiesUserIdEnabled&&b&&b!=c&&window._gtm_mh.cookieSet(a.cookiesUserIdName,b,455);b||(b=c)}catch(d){window._gtm_mh.trackError("tracking/js/aac.gtm.initPageData/userId",d)}finally{return b}});window._gtm_mh.gtm.dataLayer.set("page.originalLocation",document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search);var R=!0,I=2592E5;if(window.Storage&&H){var t=JSON.parse(localStorage.getItem("_tab_ids"))||[],u=sessionStorage.getItem("_tab_id"),n=JSON.parse(sessionStorage.getItem("_nav_path")),
+w=document.location.href;B=!1;var S=document.location.origin,P,O,M,C,Q=function(a){return 0===I?a:a.filter(function(b){try{return M=parseInt(b.split("_")[1],10),M>(new Date).getTime()}catch(c){return!1}})},T=function(a){if(0===I)return a;try{C=a.split("_");M=parseInt(C[1],10);if(M>(new Date).getTime())return a;C=C[0]+"_"+((new Date).getTime()+I);sessionStorage.setItem("_tab_id",C);return C}catch(b){return a}},U=function(){if(!1===R)return"BACK/FORWARD";if(2>n.length)return"FORWARD";P=n[n.length-2];
+O=n[n.length-1];return P===w||O===w?"BACK":"FORWARD"},V=function(){t=JSON.parse(localStorage.getItem("_tab_ids"))||[];u=sessionStorage.getItem("_tab_id");t=Q(t);if(t.length&&null!==u){var a=t.indexOf(u);-1<a&&t.splice(a,1);localStorage.setItem("_tab_ids",JSON.stringify(t))}},W=function(){var a=(new Date).getTime();"undefined"!==typeof performance&&"function"===typeof performance.now&&(a+=performance.now());return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(b){var c=(a+16*Math.random())%
+16|0;a=Math.floor(a/16);return("x"===b?c:c&3|8).toString(16)})+(0<I?"_"+((new Date).getTime()+I):"")},X=function(a,b){return!(!0===b&&0!==a&&255!==a)};null===u?(u=W(),B=!0,sessionStorage.setItem("_tab_id",u)):u=T(u);t=Q(t);-1===t.indexOf(u)&&(t.push(u),localStorage.setItem("_tab_ids",JSON.stringify(t)));var Y=t.length;if(window.PerformanceNavigation){n=n||[];var Z=window.performance.navigation.redirectCount;if(X(window.performance.navigation.type,B))switch(window.performance.navigation.type){case 0:var D=
+"NAVIGATE";n.push(w);break;case 1:D="RELOAD";0!==n.length&&n[n.length-1]===w||n.push(w);break;case 2:D=U();"FORWARD"===D?-1<document.referrer.indexOf(S)&&n.push(w):"BACK"===D?O!==w&&n.pop():n.push(w);break;default:D="OTHER",n.push(w)}else n.push(w);sessionStorage.setItem("_nav_path",JSON.stringify(n))}window.addEventListener("beforeunload",V);var aa={tabCount:Y,redirectCount:Z,navigationType:D,newTab:!0===B?"New":"Existing",tabId:u.replace(/_.+/,"")};window._gtm_mh.gtm.dataLayer.set("browsingBehavior",
+aa)}window._gtm_mh.gtm.onHtmlSuccess(102)}catch(a){google_tag_manager["rm"]["2750341"](72)&&console&&console.error("tracking error in aac.gtm.initPageData",a),window._gtm_mh.gtm.onHtmlFailure(102)}})();</script> <!--<div class="portal-layout">-->
+<script>
+    document.getElementById("loader-studis").classList.add("loader-loaded-studis");
+</script>
+
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCCFFS"
+                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+        
+
+<script type="text/javascript" id="" charset="">(function(){try{var a=google_tag_manager["rm"]["2750341"](103).dataLayer,u=google_tag_manager["rm"]["2750341"](104)||"",q=google_tag_manager["rm"]["2750341"](105),v=google_tag_manager["rm"]["2750341"](108),y=u.split(".");"page"===v&&a.set("page.context",null);a.set("action.context",null);a.set("context",null);var w=google_tag_manager["rm"]["2750341"](110),r=function(f){if(!f)return[];for(var h=0;h<f.length;h++){var c=f[h];c.price&&(c.price="string"==typeof c.price?parseFloat(c.price.replace(",",".")):c.price);c.tax&&(c.tax="string"==typeof c.tax?parseFloat(c.tax.replace(",",".")):c.tax);c.fullPrice&&
+(c.fullPrice="string"==typeof c.fullPrice?parseFloat(c.fullPrice.replace(",",".")):c.fullPrice);c.quantity&&(c.quantity="string"==typeof c.quantity?parseFloat(c.quantity.replace(",",".")):c.quantity);google_tag_manager["rm"]["2750341"](111)(c)}return f},g=function(f,h,c,D){h=a.get(h)||c;return f(h)},n=function(f,h,c){window.dataLayer.push({ecommerce_event:{items:void 0}});window.dataLayer.push({event:"ecommerce_event."+f,ecommerce_event:{event:f,items:w(h,c)},_clear:!0})},z=g(google_tag_manager["rm"]["2750341"](112),"user",{}),A=g(google_tag_manager["rm"]["2750341"](113),
+"session",{}),b=g(google_tag_manager["rm"]["2750341"](114),"page",{}),x=g(google_tag_manager["rm"]["2750341"](115),"action",{}),k=g(google_tag_manager["rm"]["2750341"](116),"cart",{}),d=g(google_tag_manager["rm"]["2750341"](117),"order",{}),B=g(google_tag_manager["rm"]["2750341"](118),"impression.promos",[]),t=g(google_tag_manager["rm"]["2750341"](119),"impression.products",[]);b.title=(b.title||document.title).replace(q.titleSeoString,"").trim();b.locale=b.locale||document.documentElement.lang;b.languageCode=b.locale?b.locale.substr(0,2):"-";A.source=A.source||google_tag_manager["rm"]["2750341"](120);b.fullPath=b.fullPath||
+document.location.pathname+document.location.search;b.marTechData=window._gtm_mh.getMarTechData(!0);d.revenue&&(d.revenue="string"==typeof d.revenue?parseFloat(d.revenue.replace(",",".")):d.revenue);d.tax&&(d.tax="string"==typeof d.tax?parseFloat(d.tax.replace(",",".")):d.tax);d.shipping&&(d.shipping="string"==typeof d.shipping?parseFloat(d.shipping.replace(",",".")):d.shipping);k.products=k.products||[];z.id=z.getId();r(t);g=google_tag_manager["rm"]["2750341"](121);var l=b.fullPath||document.location.pathname+document.location.search;
+l=l.split("?");l[0]=1<l[0].length?l[0].replace(/\/$/,""):l[0];if("page"===v){if(!window._gtm_mh.timeLoadTracked&&window.performance&&window.performance.timing){var p=window.performance.timing;b.time_load_to_active=p.domInteractive&&p.navigationStart&&0<p.domInteractive&&0<p.navigationStart?(p.domInteractive-p.navigationStart)/1E3:null}var e=g(b,b.type?b.type.split("."):[]);e.path=l.join("?");if("purchase"===b.type)e.products=r(k.products),q.deduplicateTransactions&&d.id&&(y=google_tag_manager["rm"]["2750341"](122),
+!d.id||y(d.id))&&(b.type="other",b.kind=b.type),q.maxAllowedOrderValue&&parseFloat(d.revenue)>parseFloat(q.maxAllowedOrderValue)?(d.id="BLOCKED:"+d.id,d.revenue=null,d.tax=null,d.shipping=null,k.products=[]):n("purchase",k.products);else if("checkout"===b.type){var C=r(k.products);a.set("context.products",C);1==e.step?n("view_cart",C):2==e.step&&n("begin_checkout",C)}else"product"===b.type||"detail"===b.type||"product.detail"===b.type?(e.products=r(e.products),n("view_item",e.products)):("searchresults"===
+b.type&&(e.event="view_search_results",a.set("action.context",e)),e.products=t);b.context=e;a.set("context",e);t.length&&n("view_item_list",t);B.length&&n("view_promotion",B,!0)}else if("action"===y[0]){var m=g(x,u.split(".").slice(1));m.products&&(m.products=r(m.products));a.set("action.context",m);a.set("context",m);a.set("ecommerce_event.items",null);a.set("ecommerce_event.items",w(m.products));switch(u){case "action.show.products":a.set("ecommerce_event.event","select_item");break;case "action.show.promos":a.set("ecommerce_event",
+{event:"select_promotion",items:w(m.promos,!0)});break;case "action.add":case "action.add.product":case "action.add.products":a.set("ecommerce_event",{event:"add_to_cart",items:w(x.add.products,!0)});break;case "action.remove":case "action.remove.product":case "action.remove.products":a.set("ecommerce_event",{event:"remove_from_cart",items:null});break;case "action.add_payment_info":a.set("ecommerce_event",{event:"add_payment_info",items:null});break;case "action.add_shipping_info":a.set("ecommerce_event",
+{event:"add_shipping_info",items:null})}}q.nonbounceTracking&&a.set("browsingBehavior.trackNonBounce",window._gtm_mh.detectNonBounce(u,"page"===v,x));window._gtm_mh.click=window._gtm_mh.click||{};a.set("browsingBehavior.clickCount",window._gtm_mh.click.notTrackedCount);a.set("browsingBehavior.totalClickCount",window._gtm_mh.click.count);a.set("user",z);a.set("session",A);a.set("page",b);a.set("action",x);a.set("cart",k);a.set("order",d);a.set("context.impression.promos",B);a.set("context.impression.products",
+t);"page"===v&&(a.set("impression.promos",void 0),a.set("impression.products",void 0));window._gtm_mh.gtm.onHtmlSuccess(123)}catch(f){window._gtm_mh.trackError("tracking/js/aac.gtm.initEventData",f),window._gtm_mh.gtm.onHtmlFailure(123)}})();</script><script type="text/javascript" id="" charset="">(function(){try{var a=google_tag_manager["rm"]["2750341"](172).dataLayer,u=google_tag_manager["rm"]["2750341"](173)||"",q=google_tag_manager["rm"]["2750341"](174),v=google_tag_manager["rm"]["2750341"](177),y=u.split(".");"page"===v&&a.set("page.context",null);a.set("action.context",null);a.set("context",null);var w=google_tag_manager["rm"]["2750341"](179),r=function(f){if(!f)return[];for(var h=0;h<f.length;h++){var c=f[h];c.price&&(c.price="string"==typeof c.price?parseFloat(c.price.replace(",",".")):c.price);c.tax&&(c.tax="string"==typeof c.tax?parseFloat(c.tax.replace(",",".")):c.tax);c.fullPrice&&
+(c.fullPrice="string"==typeof c.fullPrice?parseFloat(c.fullPrice.replace(",",".")):c.fullPrice);c.quantity&&(c.quantity="string"==typeof c.quantity?parseFloat(c.quantity.replace(",",".")):c.quantity);google_tag_manager["rm"]["2750341"](180)(c)}return f},g=function(f,h,c,D){h=a.get(h)||c;return f(h)},n=function(f,h,c){window.dataLayer.push({ecommerce_event:{items:void 0}});window.dataLayer.push({event:"ecommerce_event."+f,ecommerce_event:{event:f,items:w(h,c)},_clear:!0})},z=g(google_tag_manager["rm"]["2750341"](181),"user",{}),A=g(google_tag_manager["rm"]["2750341"](182),
+"session",{}),b=g(google_tag_manager["rm"]["2750341"](183),"page",{}),x=g(google_tag_manager["rm"]["2750341"](184),"action",{}),k=g(google_tag_manager["rm"]["2750341"](185),"cart",{}),d=g(google_tag_manager["rm"]["2750341"](186),"order",{}),B=g(google_tag_manager["rm"]["2750341"](187),"impression.promos",[]),t=g(google_tag_manager["rm"]["2750341"](188),"impression.products",[]);b.title=(b.title||document.title).replace(q.titleSeoString,"").trim();b.locale=b.locale||document.documentElement.lang;b.languageCode=b.locale?b.locale.substr(0,2):"-";A.source=A.source||google_tag_manager["rm"]["2750341"](189);b.fullPath=b.fullPath||
+document.location.pathname+document.location.search;b.marTechData=window._gtm_mh.getMarTechData(!0);d.revenue&&(d.revenue="string"==typeof d.revenue?parseFloat(d.revenue.replace(",",".")):d.revenue);d.tax&&(d.tax="string"==typeof d.tax?parseFloat(d.tax.replace(",",".")):d.tax);d.shipping&&(d.shipping="string"==typeof d.shipping?parseFloat(d.shipping.replace(",",".")):d.shipping);k.products=k.products||[];z.id=z.getId();r(t);g=google_tag_manager["rm"]["2750341"](190);var l=b.fullPath||document.location.pathname+document.location.search;
+l=l.split("?");l[0]=1<l[0].length?l[0].replace(/\/$/,""):l[0];if("page"===v){if(!window._gtm_mh.timeLoadTracked&&window.performance&&window.performance.timing){var p=window.performance.timing;b.time_load_to_active=p.domInteractive&&p.navigationStart&&0<p.domInteractive&&0<p.navigationStart?(p.domInteractive-p.navigationStart)/1E3:null}var e=g(b,b.type?b.type.split("."):[]);e.path=l.join("?");if("purchase"===b.type)e.products=r(k.products),q.deduplicateTransactions&&d.id&&(y=google_tag_manager["rm"]["2750341"](191),
+!d.id||y(d.id))&&(b.type="other",b.kind=b.type),q.maxAllowedOrderValue&&parseFloat(d.revenue)>parseFloat(q.maxAllowedOrderValue)?(d.id="BLOCKED:"+d.id,d.revenue=null,d.tax=null,d.shipping=null,k.products=[]):n("purchase",k.products);else if("checkout"===b.type){var C=r(k.products);a.set("context.products",C);1==e.step?n("view_cart",C):2==e.step&&n("begin_checkout",C)}else"product"===b.type||"detail"===b.type||"product.detail"===b.type?(e.products=r(e.products),n("view_item",e.products)):("searchresults"===
+b.type&&(e.event="view_search_results",a.set("action.context",e)),e.products=t);b.context=e;a.set("context",e);t.length&&n("view_item_list",t);B.length&&n("view_promotion",B,!0)}else if("action"===y[0]){var m=g(x,u.split(".").slice(1));m.products&&(m.products=r(m.products));a.set("action.context",m);a.set("context",m);a.set("ecommerce_event.items",null);a.set("ecommerce_event.items",w(m.products));switch(u){case "action.show.products":a.set("ecommerce_event.event","select_item");break;case "action.show.promos":a.set("ecommerce_event",
+{event:"select_promotion",items:w(m.promos,!0)});break;case "action.add":case "action.add.product":case "action.add.products":a.set("ecommerce_event",{event:"add_to_cart",items:w(x.add.products,!0)});break;case "action.remove":case "action.remove.product":case "action.remove.products":a.set("ecommerce_event",{event:"remove_from_cart",items:null});break;case "action.add_payment_info":a.set("ecommerce_event",{event:"add_payment_info",items:null});break;case "action.add_shipping_info":a.set("ecommerce_event",
+{event:"add_shipping_info",items:null})}}q.nonbounceTracking&&a.set("browsingBehavior.trackNonBounce",window._gtm_mh.detectNonBounce(u,"page"===v,x));window._gtm_mh.click=window._gtm_mh.click||{};a.set("browsingBehavior.clickCount",window._gtm_mh.click.notTrackedCount);a.set("browsingBehavior.totalClickCount",window._gtm_mh.click.count);a.set("user",z);a.set("session",A);a.set("page",b);a.set("action",x);a.set("cart",k);a.set("order",d);a.set("context.impression.promos",B);a.set("context.impression.products",
+t);"page"===v&&(a.set("impression.promos",void 0),a.set("impression.products",void 0));window._gtm_mh.gtm.onHtmlSuccess(192)}catch(f){window._gtm_mh.trackError("tracking/js/aac.gtm.initEventData",f),window._gtm_mh.gtm.onHtmlFailure(192)}})();</script><script type="text/javascript" id="" charset="">(function(){try{if("undefined"!==typeof document.querySelector){var d=window._gtm_mh.trackEvent,e=window.location,g=function(a,c,f){a=document.querySelectorAll(a);for(var b=0;b<a.length;b++)a[b].addEventListener(c,f),"click"===c&&"A"===a[b].nodeName&&(a[b].dataset.gtmTrackCustom=1)};"/hledat"===e.pathname&&g("li.c-subjects__item","click",function(){var a=this.parentNode;a=Array.prototype.indexOf.call(a.children,this)+1;d("Search","Result Click",google_tag_manager["rm"]["2750341"](193),a,!1,{position:a,resultCount:google_tag_manager["rm"]["2750341"](194),
+term:google_tag_manager["rm"]["2750341"](195)},"action.search_result_click")});window._gtm_mh.gtm.onHtmlSuccess(196)}}catch(a){window._gtm_mh.trackError("tracking/js/acs.listener.custom",a),window._gtm_mh.gtm.onHtmlFailure(196)}})();</script><script type="text/javascript" id="" charset="">(function(){try{var f=google_tag_manager["rm"]["2750341"](197),e=google_tag_manager["rm"]["2750341"](198),m=google_tag_manager["rm"]["2750341"](199),M=window._gtm_mh.findAncestor,t=window._gtm_mh.lib.getXpath,N=google_tag_manager["rm"]["2750341"](200);if(document.querySelector&&document.addEventListener){var q=function(a){return a?a.replace(/(^\s+|\s+$)/g,""):""},O=function(a){if([].indexOf&&a.href&&"#"!==a.href[0]&&!a.dataset.gtmTrackCustom){var b=(a.href||"").toLowerCase(),c=a.innerText?a.innerText.replace(/\s+/g," "):"";a.querySelectorAll("img").length&&(c+=(c.length?
+" ":"")+"[IMG]");c=q(c);var k=function(){window._gtm_mh=window._gtm_mh||{};window._gtm_mh.pageUnloadLocked=!0;setTimeout(function(){window._gtm_mh.pageUnloadLocked=void 0},100)},d=b.match(/^(https?:\/\/([^/]+))?\/(.*\/)?(([a-z0-9\-_]+)(\.([a-z0-9]{2,4}))?)?$/);a={file_name:d?d[5]:null,file_extension:d?d[7]:null,link_domain:d?d[2]:null,link_id:a.id,link_text:c,link_classess:a.className,link_url:b,xpath:window._gtm_mh.click.xpath};if(f.listenerTrackMailtos&&"mailto:"===b.substring(0,7))c=b.substr(7)==
+c?c:b.substr(7)+" / "+c,c=q(c.replace(/@/g,"\x3ca\x3e")),a.contact=c,e("Contact","Email Click",c,null,!1,a,"action.contact_email_click"),k();else if(f.listenerTrackMailtos&&"skype:"===b.substring(0,6))c=b.substr(6)==c?c:b.substr(6)+" / "+c,c=q(c),a.contact=c,e("Contact","Skype Click",c,null,!1,a,"action.contact_skype_click"),k();else if(f.listenerTrackMailtos&&"callto:"===b.substring(0,7))c=b.substr(7)==c?c:b.substr(7)+" / "+c,c=q(c),a.contact=c,e("Contact","Callto Click",c,null,!1,a,"action.contact_callto_click"),
+k();else if(f.listenerTrackMailtos&&"tel:"===b.substring(0,4))c=b.substr(4)==c?c:b.substr(4)+" / "+c,c=q(c),a.contact=c,e("Contact","Phone Click",c,null,!1,a,"action.contact_phone_click"),k();else if(f.listenerTrackMailtos&&"sms:"===b.substring(0,4))c=b.substr(4)==c?c:b.substr(4)+" / "+c,c=q(c),a.contact=c,e("Contact","SMS Click",c,null,!1,a,"action.contact_sms_click"),k();else{if(f.listenerTrackSocialActions){if(-1<b.indexOf("plus.google.com/share")){m("Google+","Share",google_tag_manager["rm"]["2750341"](201),"social_share");
+e("Google+",null,null,null,!1,a,"action.social_share");return}if(b.match(/twitter\.com\/(intent\/tweet|share)/i)){m("Twitter","Tweet",google_tag_manager["rm"]["2750341"](202),"social_share");e("Twitter","Tweet",null,null,!1,a,"action.social_share");return}if(b.match(/facebook\.com\/(sharer\/)?sharer\.php/i)){m("Facebook","Share",google_tag_manager["rm"]["2750341"](203),"action.social_share");e("Facebook","Share",null,null,!1,a,"action.social_share");return}if(-1<b.indexOf("pinterest.com/pin/create/button")){m("Pinterest","Pin",google_tag_manager["rm"]["2750341"](204),
+"social_share");e("Pinterest","Pin",null,null,!1,a,"action.social_share");return}if(b.match(/linkedin\.com\/shareArticle/i)){m("LinkedIn","Share",google_tag_manager["rm"]["2750341"](205),"social_share");e("LinkedIn","Share",null,null,!1,a,"action.social_share");return}}if(f.listenerTrackDownloadExtensions&&(k=new RegExp("\\.("+f.listenerTrackDownloadExtensions.split(",").join("|")+")$"),d=b.match(k))){e("Download",q(b),c,null,!1,a,"action.file_download");return}f.listenerTrackExternalLinks&&(k=function(g){if(!g||4>
+g.length)return!1;if(f.listenerIgnoredExternalDomains.length){var l=new RegExp("^(https?:)?(//)?[^/]*("+f.listenerIgnoredExternalDomains.split(",").join("|")+")");if(g.match(l))return!1}return/^(https?:)?\/\//i.test(g)&&!(new RegExp("^(https?:)?//"+window.location.hostname,"i")).test(g)},k(b)&&(b=b.replace(/^(https?:)?\/\//,"").replace(/\/$/,""),e("External Link",q(b),c,null,!1,a,"action.external_link")))}}};(f.listenerTrackMailtos||f.listenerTrackSocialActions||f.listenerTrackDownloads||f.listenerTrackExternalLinks)&&
+document.addEventListener("click",function(a){window._gtm_mh.click=window._gtm_mh.click||{count:0,notTrackedCount:0};window._gtm_mh.click.xpath=t(a.target);window._gtm_mh.click.count++;window._gtm_mh.click.notTrackedCount++;(a="A"===a.target.nodeName?a.target:window._gtm_mh.findAncestorLink(a.target,"a"))&&O(a)},{capture:!0,passive:!1});f.copyTrackingEnabled&&(document.querySelector("body").addEventListener("copy",function(a){var b="";window.getSelection&&(b+=window.getSelection().toString().trim());
+0===b.length&&(b+=a.target.textContent.trim());/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/im.test(b)?(b=b.replace("@","\x3ca\x3e"),e("Contact","Email Copy (Ctrl+C)","Mail "+b,null,!1,{contact:b},"action.contact_email_copy_ctrlc")):/^(\+?42.)?\s?[1-9][0-9]{2}(\s?[0-9]{3}){2}$/.test(b)?e("Contact","Phone Copy (Ctrl+C)","Phone Number "+b,null,!1,{contact:b},"action.contact_phone_copy_ctrlc"):e("Copy to Clipboard",b,null,null,!1,{text:b},"action.copy_to_clipboard")},{passive:!0}),document.querySelector("body").addEventListener("contextmenu",
+function(a){var b=a.target;window._gtm_mh.click=window._gtm_mh.click||{count:0,notTrackedCount:0};window._gtm_mh.click.xpath=t(a.target);(a="A"===b.nodeName?b:M(b,"a"))&&/^mailto:/.test(a.href)?(b=b.textContent.replace("@","\x3ca\x3e"),e("Contact","Mailto Copy (Mouse Right Button)",b,null,!1,{contact:b},"action.contact_email_copy_mouse_right_button")):a&&/^skype:/.test(a.href)?e("Contact","Skype Copy (Mouse Right Button)",b.textContent,null,!1,{contact:b.textContent},"action.contact_skype_copy_mouse_right_button"):
+a&&/^(callto|tel|sms):/.test(a.href)?e("Contact","Phone Copy (Mouse Right Button)",b.textContent,null,!1,{contact:b.textContent},"action.contact_phone_copy_mouse_right_button"):(b="["+b.nodeName+"] "+("IMG"===b.nodeName?b.src:b.textContent),b=b.replace(/\s+/g," ").trim(),140<b.length&&(b=b.substr(0,135)+"..."),b=b?b:"-",e("Open Context Menu (Mouse Right Button)",b,a?"link "+a.href:null,null,!1,{text:b},"action.page_context_menu_open"))}));if(f.timerEnabled&&f.timerTimeouts.length)for(var n=f.timerTimeouts.split(",").sort(function(a,
+b){return a<b?-1:a>b?1:0}),h=0;h<n.length;h++)(function(a,b,c,k,d){setTimeout(function(){window.dataLayer.push({event:"action.timer","action.timer":{category:"Timer",action:a,value:a,nonInteractive:!0}})},1E3*a)})(n[h],h+1,+new Date,0!==h?n[h]-n[h-1]:null,h<n.length-1?n[h+1]-n[h]:null);f.trackPageUnload&&window.addEventListener("beforeunload",function(a){window._gtm_mh=window._gtm_mh||{};if(!window._gtm_mh.pageUnloadLocked){a=0;"hidden"!==document.visibilityState&&(a=(+new Date-google_tag_manager["rm"]["2750341"](206).dataLayer.get("gtm.start")||
+0)/1E3,a=3600>a?a:null);var b={totalClickCount:window._gtm_mh.click.count};e("Page","Unload",null,a,!0,b,"action.page_unload")}});f.pageActions&&(window.addEventListener("beforeprint",function(a){e("Page","Print","Before Print",null,!0,null,"action.page_print")},{passive:!0}),window.addEventListener("afterprint",function(a){e("Page","Print","After Print",null,!0,null,"action.page_print")},{passive:!0}));window.addEventListener("keydown",function(a){a.key&&(a=(a.key||"").toLowerCase(),"control"===
+a||"meta"===a?window._gtm_mh.ctrlPressed=!0:window._gtm_mh.ctrlPressed&&(window._gtm_mh.ctrlPressed=!1,"f"===a&&e("Page","Search (Ctrl+F)",null,null,!0,null,"action.page_search_ctrl_f")))});window.addEventListener("keyup",function(a){a.key&&(a=(a.key||"").toLowerCase(),"control"===a||"meta"===a)&&(window._gtm_mh.ctrlPressed=!1)});f.visibilityTrackingEnabled&&(window.addEventListener("beforeunload",function(a){window._gtm_mh=window._gtm_mh||{};window._gtm_mh.status_page_unload=!0}),n=function(){void 0!==
+document.hidden&&document.addEventListener("visibilitychange",function(){window._gtm_mh=window._gtm_mh||{};window._gtm_mh.status_page_unload||e("Page","Visibility change",document.visibilityState,null,!0,{is_page_visible:document.visibilityState},"action.page_visibility_change")},{passive:!0})},n());if(f.formTracking){var x=function(a){return a?a.replace(/\s+/g," ").trim():null},y=window._gtm_mh.stringToEventName,D=function(a){if(a){var b=a.placeholder;return b?x(b):(b=document.querySelector('label[for\x3d"'+
+a.id+'"]'))?x(b.textContent):(b=x(a.textContent))?b:"submit"===a.type?a.value:b=x(a.name||a.parentNode.textContent)}},z=function(a){if(!a||a.dataset.gtm_dnt)return!1;if(a.dataset.gtm_name)return a.dataset.gtm_name;for(var b=f.formTable,c=0;c<b.length;c++)if(a.matches(b[c].selector))return a.dataset.gtm_name=b[c].name,a.dataset.gtm_type=b[c].type,a.dataset.gtm_input_selector=b[c].inputSelector,b[c].name;a.dataset.gtm_dnt=!0;return!1},A=function(a){for(var b={form:null,input:null};a;){if("INPUT"===
+a.nodeName&&"hidden"!==a.type)b.input=a;else if(-1<["TEXTAREA","SELECT","BUTTON"].indexOf(a.nodeName))b.input=a;else if("FORM"===a.nodeName){b.form=a;break}a=a.parentElement}return b};document.addEventListener("submit",function(a){a=A(a.target);var b=z(a.form);if(b)switch(e("Form "+b,"Submit form",null,null,!1,{form_name:b},"action.form_submit_"+y(b)),a.form.dataset.gtm_type){case "search":a=(a=a.form.querySelector(a.form.dataset.gtm_input_selector))?a.value:"";e("Search","Perform search",null,null,
+!1,{search_term:a},"action.search");break;case "contact":e("Contact","Form submit",null,null,!1,{},"action.contact_form");break;case "newsletter_subscribe":a=(a=a.form.querySelector(a.form.dataset.gtm_input_selector))?a.value:"";e("Newsletter","Subscribe",null,null,!1,{email:a},"action.newsletter_subscribe");break;case "new_account":e("Account","Create",null,null,!1,{method:"Form"},"action.sign_up");break;case "login":e("Account","Login",null,null,!1,{method:"Form"},"action.login")}},{capture:!0,
+passive:!1});document.addEventListener("invalid",function(a){a=A(a.target);if(a.input&&a.form){var b=z(a.form);if(b){var c=D(a.input);e("Form "+b,"Invalid "+(a.input.nodeName||"-").toLowerCase()+" "+c,null,null,!0,{form_name:b,input_name:(a.input.nodeName||"-").toLowerCase()+" "+c,xpath:t(a.input)},"action.form_invalid_"+y(b))}}},{capture:!0,passive:!0});document.addEventListener("focus",function(a){a=A(a.target);if(a.input&&a.form){var b=(a.input.type||a.input.nodeName||"-").toLowerCase();if("radio"!==
+b&&"checkbox"!==b&&("select"!==b||!a.input.multiple)){var c=z(a.form);if(c){var k="Focus";if("button"===b||"submit"===b)k="Click";var d=D(a.input);e("Form "+c,k+" "+b+" "+d,null,null,!1,{form_name:c,input_name:(a.input.nodeName||"-").toLowerCase()+" "+d,xpath:t(a.input)},"action.form_focus_"+y(c));"search"===a.form.dataset.gtm_type&&a.input.matches(a.form.dataset.gtm_input_selector)&&(e("Form "+c,k+" "+b+" "+d,null,null,!1,{form_name:c,input_name:(a.input.nodeName||"-").toLowerCase()+" "+d,xpath:t(a.input)},
+"action.search_init"),a.input.dataset.gtm_dellistener||(a.input.dataset.gtm_dellistener=!0,a.input.dataset.gtm_val="",a.input.dataset.gtm_mode="c",a.input.addEventListener("keyup",function(g){var l=(g=g.target)&&g.value?g.value:"";if("c"===g.dataset.gtm_mode&&0<l.length)g.dataset.gtm_mode="a",e("Search","Start typing","",null,!1,{},"action.search_typing");else if(g.dataset.gtm_val.length>l.length){if("a"===g.dataset.gtm_mode){var H=g.dataset.gtm_val;e("Search","Deleting",H,null,!1,{search_term:H},
+"action.search_deleting")}g.dataset.gtm_mode="d"}else g.dataset.gtm_mode="a";g.dataset.gtm_val=l.toLowerCase()},{capture:!0,passive:!0})))}}}},{capture:!0,passive:!0});document.addEventListener("change",function(a){a=A(a.target);var b=z(a.form);if(b){var c=D(a.input);e("Form "+b,"Change "+(a.input.nodeName||"-").toLowerCase()+" "+c,null,null,!1,{form_name:b,input_name:(a.input.nodeName||"-").toLowerCase()+" "+c,xpath:t(a.input)},"action.form_change_"+y(b))}},{capture:!0,passive:!0})}f.webCoreVitals&&
+function(){window._gtm_mh=window._gtm_mh||{};window._gtm_mh.performance=window._gtm_mh.performance||{};var a="hidden"===document.visibilityState?0:Infinity;document.addEventListener("visibilitychange",function(d){a=Math.min(a,d.timeStamp)},{once:!0});try{var b=new PerformanceObserver(function(d){d=d.getEntries();d=d[d.length-1];window._gtm_mh.performance.lcp={value:Math.round(100*d.startTime)/100,entry:d}});b.observe({type:"largest-contentful-paint",buffered:!0});var c=new PerformanceObserver(function(d){d=
+d.getEntries()||[];for(var g=0;g<d.length;g++){var l=d[g];l.startTime<a&&(l=l.processingStart-l.startTime,window._gtm_mh.performance.fid.value=Math.round(100*l)/100)}});window._gtm_mh.performance.fid=window._gtm_mh.performance.fid||{};c.observe({type:"first-input",buffered:!0});var k=new PerformanceObserver(function(d){var g=0;d=d.getEntries()||[];for(var l=0;l<d.length;l++)d[l].hadRecentInput||(g+=d[l].value);if(0!==g){d=window._gtm_mh.performance.cls;l=+new Date;if(!d.currentBurstStart||!d.currentBurstLastShift||
+5E3<l-d.currentBurstStart||1E3<l-d.currentBurstLastShift)d.currentBurstStart=l,d.bursts.push({value:0});d.bursts[d.bursts.length-1].value+=g;d.currentBurstLastShift=l}});window._gtm_mh.performance.cls=window._gtm_mh.performance.cls||{currentBurstStart:null,currentBurstLastShift:null,bursts:[]};k.observe({type:"layout-shift",buffered:!0})}catch(d){N&&console.error("Web Core Vitals tracking exception",d)}}();if(f.pageTranslations){var u=new MutationObserver(function(a){try{var b=!1,c=null,k=null;a.forEach(function(d){"class"===
+d.attributeName?d.target&&-1<d.target.className.indexOf("translated-")?(b=!0,c="translate"):d.oldValue&&-1<d.oldValue.indexOf("translated-")&&(b=!0,c="switch to default"):"lang"===d.attributeName&&d.target.lang&&(k=d.target.lang)});b&&k&&window._gtm_mh.trackEvent("Translation","Google browser plugin: "+c,k,null,!0,{language:k,service:"Google Browser Plugin"},"action.page_translation")}catch(d){window._gtm_mh.trackError("tracking/js/listener.universal/translate",d)}});n={attributes:!0,childList:!1,
+attributeOldValue:!0,characterData:!1};if(!window._gtm_mh.translationTracked)if(-1<window.location.href.indexOf("translate.goog")||-1<window.location.href.indexOf("translate.googleusercontent.com")){window._gtm_mh.translationTracked=!0;var p=window._gtm_mh.getURLParameter("tl")||document.documentElement.lang;window._gtm_mh.trackEvent("Translation","Google translate website",p,null,!0,{language:p,service:"Google Translate Website"},"action.page_translation")}else-1<document.documentElement.className.indexOf("translated-")?
+(window._gtm_mh.translationTracked=!0,p=document.documentElement.lang,window._gtm_mh.trackEvent("Translation","Google browser plugin: auto",p,null,!0,{language:p,service:"Google Browser Plugin"},"action.page_translation"),u.observe(document.querySelector("html"),n)):-1<window.location.href.indexOf("translatoruser-int.com")?(window._gtm_mh.translationTracked=!0,p=window._gtm_mh.getURLParameter("to"),window._gtm_mh.trackEvent("Translation","Bing translator website",p,null,!0,{language:p,service:"Bing"},
+"action.page_translation")):u.observe(document.querySelector("html"),n)}if(f.errorTrackingEnabled){u={};for(h=0;h<f.errorTrackingSelectors.length;h++){var r=document.querySelectorAll(f.errorTrackingSelectors[h].selector);for(p=0;p<r.length;p++){var P=q(r[p].textContent.replace(/\s+/g," "));u[P]=f.errorTrackingSelectors[h].name}}h=0;for(var I in u)setTimeout(function(a,b){e("Error Message",b,a,0,!0,{type:b,message:a},"action.error_message")},500*h,I,u[I])}var E=function(){window.FB.Event.subscribe("edge.create",
+function(a){m("Facebook","Like",a,"social_like")});window.FB.Event.subscribe("edge.remove",function(a){m("Facebook","Unlike",a,"social_unlike")});window.FB.Event.subscribe("comment.create",function(a){m("Facebook","Create Comment",a,"social_create_comment")});window.FB.Event.subscribe("comment.remove",function(a){m("Facebook","Remove Comment",a,"social_remove_comment")});window.FB.Event.subscribe("message.send",function(a){m("Facebook","Send Message",a,"social_send_message")})};"undefined"!==typeof window.FB&&
+window.FB.Event?E():document.querySelector("script#facebook-jssdk")?document.querySelector("script#facebook-jssdk").addEventListener("load",E,{passive:!0}):document.querySelector("div#fb-root")&&setTimeout(function(){var a=document.querySelector("div#fb-root");a&&a.addEventListener("load",E,{passive:!0})},500);var F=function(){var a=window.twttr;a.events&&a.events.bind&&(a.events.bind("tweet",function(b){b&&m("Twitter","Tweet",b.target&&"IFRAME"==b.target.nodeName?b.target.src:void 0,"social_share")}),
+a.events.bind("follow",function(b){b&&m("Twitter","Follow",b.target&&"IFRAME"==b.target.nodeName?b.target.src:void 0,"social_follow")}),a.events.bind("retweet",function(b){b&&m("Twitter","Retweet",b.target&&"IFRAME"==b.target.nodeName?b.target.src:void 0,"social_share")}),a.events.bind("favorite",function(b){b&&m("Twitter","Favourite",b.target&&"IFRAME"==b.target.nodeName?b.target.src:void 0,"social_follow")}))};"undefined"!==typeof window.twttr?F():document.querySelector("script#twitter-wjs")?document.querySelector("script#twitter-wjs").addEventListener("load",
+F,!1):document.querySelector('a[class^\x3d"twitter-"][class$\x3d"-button"]')&&setTimeout(function(){var a=document.querySelector("script#twitter-wjs");a&&a.addEventListener("load",F,{passive:!0})},500);window.addEventListener("scroll",window._gtm_mh.evaluateScrollReach,{passive:!0});var B=(new Date).getTime(),v=0,J=0,w=!0,G=!1,K=function(){J=(new Date).getTime();v+=J-B;w=!0};h=function(a){w&&(w=!1,B=(new Date).getTime(),G=!1);window.clearTimeout(L);L=window.setTimeout(K,5E3)};r=function(a,b){window.addEventListener?
+window.addEventListener(a,b,{passive:!0}):window.attachEvent&&window.attachEvent("on"+a,b)};var C=function(a){w||(v+=(new Date).getTime()-B);!G&&0<v&&36E5>v&&(window._gtm_mh.timeEngaged=Math.round(v/100)/10);w&&(G=!0);a&&"beforeunload"===a.type&&window.removeEventListener("beforeunload",C);B=(new Date).getTime();window.setTimeout(C,1E3)};r("mousedown",h);r("keydown",h);r("scroll",h);r("mousemove",h);r("beforeunload",C);var L=window.setTimeout(K,5E3);window.setTimeout(C,1E3);window._gtm_mh.gtm.onHtmlSuccess(207)}}catch(a){window._gtm_mh.trackError("tracking/js/aac.listener.universal",
+a),window._gtm_mh.gtm.onHtmlFailure(207)}})();</script></body></html>
