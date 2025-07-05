@@ -1,4 +1,3 @@
-
 def register(bot):
     @bot.message_handler(func=lambda m: True)
     def fallback(message):
